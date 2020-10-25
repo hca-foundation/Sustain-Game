@@ -24,3 +24,7 @@ $ npm start
 ```
 
 Back-End Development
+
+## Data Structure/ERD
+
+![ERD](./ugl_erd.png)
