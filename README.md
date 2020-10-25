@@ -11,7 +11,7 @@ Once the feature has been fully tested with all other code, a PR is created agai
 
 ### Clone the Repo
 ```
-$ git clone git@github.com:hca-foundation/urbangreenlab.git
+$ git clone git@github.com:Urban-Green-Lab/application.git
 $ cd urbangreenlab
 ```
 
