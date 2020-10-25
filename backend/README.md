@@ -7,13 +7,13 @@
 - FE Endpoints
 - Deploy with Heroku
 - CRUD Endpoints
+- Create fixtures from given quizzes
 - Send emails after post to Quiz Taker
   - Create default email template
     - Score
     - Questions
       - Correct Answers
       - Info Link
-- Create fixtures from given quizzes
 - Admin side
 - Download CSV file (by Event)
   - Email
