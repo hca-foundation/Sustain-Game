@@ -34,4 +34,4 @@ Back-End Development
 <!-- TODO: Netlify  -->
 
 ## Data Structure/ERD
-![ERD](./ugl_erd.png)
+[![ERD](./ugl_erd.png)](https://dbdiagram.io/d/5f95f1fa3a78976d7b79179a)
