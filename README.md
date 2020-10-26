@@ -21,16 +21,34 @@ $ cd application
 
 ### Installs
 #### Front-End Development
-```
+```shell
 $ cd browser
 $ npm i
 $ npm start
 ```
 
 #### Back-End Development
-<!-- TODO: Update this info -->
-```
+Start postgress server with DB name and username `postgress`
+
+```shell
+# Go to the API directory
 $ cd api
+
+# Create a virtual environment to isolate our package dependencies locally
+$ python3 -m venv uglenv
+$ source uglenv/bin/activate  # On Windows use `uglenv\Scripts\activate`
+
+# install necessary dependencies
+$ pip install -r requirements.txt
+
+# Start server
+$ python manage.py runserver
+
+# Make migrations
+$ python manage.py makemigrations
+
+# Migrate
+$ python manage.py migrate
 ```
 
 ### Deploy
