@@ -1,0 +1,11 @@
+// GLOBAL STYLES
+@import './globals';
+
+// COMPONENTS
+@import './components';
+
+
+// TODO: REMOVE
+body {
+  background-color: $background;
+}
