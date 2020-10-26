@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d7812091-21b8-4a63-8044-a72b7a933934/deploy-status)](https://app.netlify.com/sites/uglapp/deploys)
 
-[Live Site](https://uglapp.netlify.app)
+[Development Site](https://uglapp.netlify.app)
 
 This application is used to create quizzes that can be administered at events or on the internet.
 
@@ -16,7 +16,7 @@ Once the feature has been fully tested with all other code, a PR is created agai
 ### Clone the Repo
 ```
 $ git clone git@github.com:Urban-Green-Lab/application.git
-$ cd urbangreenlab
+$ cd application
 ```
 
 ### Installs
@@ -29,6 +29,9 @@ $ npm start
 
 Back-End Development
 <!-- TODO: Update this info -->
+```
+$ cd backend
+```
 
 ### Deploy
 <!-- TODO: Netlify  -->
