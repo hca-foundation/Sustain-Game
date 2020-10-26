@@ -9,7 +9,7 @@
 - CRUD Endpoints
 - Create fixtures from given quizzes
 - Send emails after post to Quiz Taker
-  - Create default email template
+  - [Create default email template](./email.txt)
     - Score
     - Questions
       - Correct Answers
