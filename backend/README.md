@@ -22,7 +22,6 @@
   - Event Name
   - Event Date
 
-
 ## FE Endpoints
 
 ### Active Event Quiz (READ)

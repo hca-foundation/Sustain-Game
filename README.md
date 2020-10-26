@@ -1,5 +1,9 @@
 # Urban Green Lab Game Application
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d7812091-21b8-4a63-8044-a72b7a933934/deploy-status)](https://app.netlify.com/sites/uglapp/deploys)
+
+[Live Site](uglapp.netlify.app)
+
 This application is used to create quizzes that can be administered at events or on the internet.
 
 There is a backend admin site as well as a user application for game play, which also includes a leaderboard.
@@ -24,7 +28,10 @@ $ npm start
 ```
 
 Back-End Development
+<!-- TODO: Update this info -->
+
+### Deploy
+<!-- TODO: Netlify  -->
 
 ## Data Structure/ERD
-
 ![ERD](./ugl_erd.png)
