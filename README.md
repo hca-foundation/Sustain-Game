@@ -20,14 +20,14 @@ $ cd application
 ```
 
 ### Installs
-Front-End Development
+#### Front-End Development
 ```
 $ cd frontend
 $ npm i
 $ npm start
 ```
 
-Back-End Development
+#### Back-End Development
 <!-- TODO: Update this info -->
 ```
 $ cd backend
