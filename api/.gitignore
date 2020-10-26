@@ -28,6 +28,7 @@ media
 *.py[cod] 
 *$py.class 
 
+
 # Distribution / packaging 
 .Python build/ 
 develop-eggs/ 
@@ -83,6 +84,7 @@ venv/
 ENV/ 
 env.bak/ 
 venv.bak/ 
+uglenv/
 
 # mkdocs documentation 
 /site 
