@@ -9,9 +9,12 @@ This application is used to create quizzes that can be administered at events or
 There is a backend admin site as well as a user application for game play, which also includes a leaderboard.
 
 ## Get Started
-Get started with local development. Create a branch for the issue you are working on and create all PRs against the `development` branch.
+Get started with local development. 
 
-Once the feature has been fully tested with all other code, a PR is created against `main` and merged in to production.
+- Create a branch for the issue you are working on and create all PRs against the `development` branch.
+  - A preview deploy will be created for testing
+  - Once approved by 2 reviewers, you can merge into development
+- Once the feature has been fully tested with all other code, a PR is created against `master` and merged into production.
 
 ### Clone the Repo
 ```
