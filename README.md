@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d7812091-21b8-4a63-8044-a72b7a933934/deploy-status)](https://app.netlify.com/sites/uglapp/deploys)
 
-[Live Site](uglapp.netlify.app)
+[Live Site](https://uglapp.netlify.app)
 
 This application is used to create quizzes that can be administered at events or on the internet.
 
