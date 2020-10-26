@@ -1,7 +1,7 @@
 ### Installs
 Front-End Development
 ```
-$ cd frontend
+$ cd browser
 $ npm i
 $ npm start
 ```

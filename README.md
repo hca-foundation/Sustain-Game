@@ -22,7 +22,7 @@ $ cd application
 ### Installs
 #### Front-End Development
 ```
-$ cd frontend
+$ cd browser
 $ npm i
 $ npm start
 ```
@@ -30,7 +30,7 @@ $ npm start
 #### Back-End Development
 <!-- TODO: Update this info -->
 ```
-$ cd backend
+$ cd api
 ```
 
 ### Deploy
