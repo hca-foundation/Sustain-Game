@@ -38,7 +38,7 @@ $ npm start
 ```
 
 #### Back-End Development
-Start postgress server with DB name and username `postgress`
+Start postgres server with DB name and username `postgres`
 
 ```shell
 # Go to the API directory
@@ -51,6 +51,26 @@ $ source uglenv/bin/activate  # On Windows use `uglenv\Scripts\activate`
 # install necessary dependencies
 $ pip install -r requirements.txt
 
+# install postgres
+$ brew install postgres
+$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+# Create two new aliases to start and stop your postgres server. They could look something like this:
+# alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+# alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+
+# Refresh New Settings
+$ source ~/.zshrc # source ~/.bashrc if using bash
+
+# Use this command to start your database service.
+$ pg_start 
+
+# Create database
+$ createdb postgres
+
+# Create user postgres on database
+$ createuser -s postgres
+
 # Start server
 $ python manage.py runserver
 
@@ -59,6 +79,10 @@ $ python manage.py makemigrations
 
 # Migrate
 $ python manage.py migrate
+```
+***Be sure to stop your db server when developing use this command***
+```shell
+$ pg_stop
 ```
 
 ### Code Reviews
