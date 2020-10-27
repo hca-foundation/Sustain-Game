@@ -4,10 +4,12 @@ from django.db import models
 class Event(models.Model):
     """Event Model
 
+    Description: Stores a single event
+
     Fields
-    - name = `models.CharField`
-    - active =  `models.BooleanField`
-    - date = `models.DateField(auto_now=False, auto_now_add=False)`
+    - name = `CharField`
+    - active =  `BooleanField`
+    - date = `DateField(auto_now=False, auto_now_add=False)`
     """
     name = models.CharField(max_length=255)
     active = models.BooleanField(default=False)

@@ -7,8 +7,8 @@ class QuizBank(models.Model):
     Description: Stores a single quiz for the quiz bank
 
     Fields
-    - name = `models.CharField(max_length=255)`
-    - timer = `models.IntegerField` in minutes
+    - name = `CharField(max_length=255)`
+    - timer = `IntegerField` in minutes
     """
     name = models.CharField(max_length=255)
     timer = models.IntegerField()
