@@ -5,6 +5,8 @@
 
 [Development Site](https://uglapp.netlify.app)
 
+[Team Notes](https://docs.google.com/document/d/1jD16iYyyfLIwJWif1GmEZSLwIdyAaQgOXpkWttVGTV8/edit#)
+
 This application is used to create quizzes that can be administered at events or on the internet.
 
 There is a backend admin site as well as a user application for game play, which also includes a leaderboard.
