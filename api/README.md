@@ -30,12 +30,12 @@
   "event_id": "int",
   "quiz_id": "int",
   "child_mode": "bool",
-  "question_id": "int",
   "timer": "int (min)", 
   "questions": [
     {
       "question": "varchar",
       "image": "url",
+      "question_id": "int",
       "value": "int",
       "answers": [
         {
