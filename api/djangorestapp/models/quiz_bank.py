@@ -7,7 +7,7 @@ class QuizBank(models.Model):
 
     Fields
     - name = `models.CharField(max_length=255)`
-    - timer = `models.IntegerField`
+    - timer = `models.IntegerField` in minutes
     """
     name = models.CharField(max_length=255)
     timer = models.IntegerField()
