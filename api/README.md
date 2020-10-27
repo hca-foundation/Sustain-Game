@@ -35,6 +35,7 @@
     {
       "question": "varchar",
       "image": "url",
+      "question_id": "int",
       "value": "int",
       "answers": [
         {
