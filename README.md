@@ -12,14 +12,28 @@ There is a backend admin site as well as a user application for game play, which
 
 ## Table of Contents
 
+- [Features](#features)
 - [Get Started Developing](#get-started)
 - [Clone Repo](#clone-the-repo)
 - [Installs](#installs)
 - [Code Reviews](#code-reviews)
 - [Deployment](#deployment)
 - [Data Structure/ERD](#data-structureerd)
-- [Features](#features)
 - [Contributors](#contributors)
+
+
+## Features (Tech Roadmap)
+- Child mode
+    - the application will not collect personal identifiable information from kids under the age of 13. 
+    - If the admin sets an event on child mode, the users will play the game, get a score, and be added to the leaderboard. There is no information collected
+- Administration panel
+    - Administrators can create, edit, and update events
+    - Administrators can create, edit, and update quizzes
+    - Administrators can create, edit, and update quiz questions
+    - Admin can download csv files that include info about quiz takers to upload to any CRM software program
+- Separate game application for users
+    - A distraction free interface that allows users to beat the clock as they try to gain the high score while also learning about the environment and sustainability
+    - Non-child users receive an email with the info on their quiz along with links to to resources and more information about UGL
 
 ## Get Started
 Get started with local development. 
@@ -98,10 +112,6 @@ COMING SOON
 
 ### Data Structure/ERD
 [![ERD](./ugl_erd.png)](https://dbdiagram.io/d/5f95f1fa3a78976d7b79179a)
-
-## Features
-
-COMING SOON
 
 ## Contributors
 ### Team Leads
