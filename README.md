@@ -82,7 +82,7 @@ $ python manage.py makemigrations
 # Migrate
 $ python manage.py migrate
 ```
-***Be sure to stop your db server when developing use this command***
+***Be sure to stop your db server when not developing use this command***
 ```shell
 $ pg_stop
 ```
@@ -106,9 +106,9 @@ COMING SOON
 
 ## Contributors
 ### Team Leads
-| <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez <br />Tech Lead**</a> | <a href="#" target="_blank">**Meg Underwood <br />Project Manager**</a> |
+| <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez <br />Tech Lead**</a> | <a href="https://github.com/meg723" target="_blank">**Meg Underwood <br />Project Manager**</a> |
 | :---: |:---:|
-| [![Dr. Teresa Vasquez](https://avatars1.githubusercontent.com/u/29741570?v=3&s=200)](https://github.com/drteresavasquez) | [![Meg Underwood](https://raw.githubusercontent.com/Urban-Green-Lab/h4tc-ugl-app-fe/master/documentation/images/avatar.png)](#) 
+| [![Dr. Teresa Vasquez](https://avatars1.githubusercontent.com/u/29741570?v=3&s=200)](https://github.com/drteresavasquez) | [![Meg Underwood](https://avatars3.githubusercontent.com/u/72745098?v=3&s=200)](#) 
 
 ### UX/UI
 | <a href="https://github.com/bdoves" target="_blank">**Bodhi Stewart**</a> |
@@ -116,16 +116,16 @@ COMING SOON
 | [![Bodhi Stewart](https://avatars1.githubusercontent.com/u/60450642?v=3&s=200)](#) |
 
 ### Designers
-| <a href="#" target="_blank">**Ryan Firm**</a> | <a href="#" target="_blank">**Nick	Miller**</a> |
+| <a href="https://github.com/ryan-firm" target="_blank">**Ryan Firm**</a> | <a href="#" target="_blank">**Nick	Miller**</a> |
 | :---: |:---:|
-| [![Ryan Firm](https://raw.githubusercontent.com/Urban-Green-Lab/h4tc-ugl-app-fe/master/documentation/images/avatar.png?v=3&s=200)](#) | [![NIck	Miller](https://raw.githubusercontent.com/Urban-Green-Lab/h4tc-ugl-app-fe/master/documentation/images/avatar.png?v=3&s=200)](#) 
+| [![Ryan Firm](https://avatars1.githubusercontent.com/u/64981037?v=3&s=200)](#) | [![Nick	Miller](https://raw.githubusercontent.com/Urban-Green-Lab/h4tc-ugl-app-fe/master/documentation/images/avatar.png?v=3&s=200)](#) 
 
-### Front End Developers
-| <a href="https://github.com/prafullatass" target="_blank">**Prafullata	Sonawane**</a> | <a href="https://github.com/jeremybdavis" target="_blank">**Jeremy	Davis**</a> | <a href="https://github.com/vieraruben" target="_blank">**Ruben Viera**</a> |
-| :---: |:---:| :---:|
-| [![Prafullata	Sonawane](https://avatars1.githubusercontent.com/u/43792249?v=3&s=200)](https://github.com/prafullatass)    | [![Jeremy	Davis](https://avatars1.githubusercontent.com/u/13025274?v=3&s=200)](https://github.com/jeremybdavis) | [![Ruben Viera](https://avatars1.githubusercontent.com/u/25134906?v=3&s=200)](https://github.com/vieraruben)  |
+### Front End Engineers
+| <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez**</a> | <a href="https://github.com/prafullatass" target="_blank">**Prafullata	Sonawane**</a> | <a href="https://github.com/jeremybdavis" target="_blank">**Jeremy	Davis**</a> | <a href="https://github.com/vieraruben" target="_blank">**Ruben Viera**</a> |
+| :---: |:---:| :---:| :---:|
+|[![Dr. Teresa Vasquez](https://avatars1.githubusercontent.com/u/29741570?v=3&s=200)](https://github.com/drteresavasquez) | [![Prafullata	Sonawane](https://avatars1.githubusercontent.com/u/43792249?v=3&s=200)](https://github.com/prafullatass)    | [![Jeremy	Davis](https://avatars1.githubusercontent.com/u/13025274?v=3&s=200)](https://github.com/jeremybdavis) | [![Ruben Viera](https://avatars1.githubusercontent.com/u/25134906?v=3&s=200)](https://github.com/vieraruben)  |
 
-### Back End Developers
+### Back End Engineers
 | <a href="https://github.com/RefreshingChi" target="_blank">**Chiitra Tibbs**</a> | <a href="https://github.com/hannahhall" target="_blank">**Hannah Hall**</a> | <a href="https://github.com/TrinityTerry" target="_blank">**Trinity Christiana**</a> |
 | :---: |:---:| :---:|
 | [![Chiitra Tibbs](https://avatars1.githubusercontent.com/u/5008978?v=3&s=200)](https://github.com/RefreshingChi)    | [![Hannah Hall](https://avatars1.githubusercontent.com/u/18269696?v=3&s=200)](https://github.com/hannahhall) | [![TrinityTerry](https://avatars1.githubusercontent.com/u/31781724?v=3&s=200)](https://github.com/TrinityTerry)  |
