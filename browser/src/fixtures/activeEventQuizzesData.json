@@ -1,0 +1,689 @@
+[
+  {
+    "event_id": 1,
+    "quiz_id": 1,
+    "child_mode": false,
+    "timer": 5,
+    "questions": [
+      {
+        "question": "Which energy source do we use the most for electricity in Tennessee?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Coal",
+            "is_correct": false
+          },
+          {
+            "answer": "Nuclear",
+            "is_correct": true
+          },
+          {
+            "answer": "Solar",
+            "is_correct": false
+          },
+          {
+            "answer": "Natural Gas",
+            "is_correct": false
+          },
+          {
+            "answer": "Hydroelectric",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "What percentage of food in the US goes uneaten?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "20%",
+            "is_correct": false
+          },
+          {
+            "answer": "25%",
+            "is_correct": false
+          },
+          {
+            "answer": "30%",
+            "is_correct": false
+          },
+          {
+            "answer": "40%",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "Which of these is an effective way to reduce your carbon footprint?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Taking a train, bus, or bike instead of driving",
+            "is_correct": true
+          },
+          {
+            "answer": "Eating less meat",
+            "is_correct": true
+          },
+          {
+            "answer": "Purchasing energy efficient appliances",
+            "is_correct": true
+          },
+          {
+            "answer": "Replacing your light bulbs with LED’s",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "What sector was the largest source of greenhouse gas emissions in 2017?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Electricity Production",
+            "is_correct": false
+          },
+          {
+            "answer": "Agriculture",
+            "is_correct": false
+          },
+          {
+            "answer": "Transportation",
+            "is_correct": true
+          },
+          {
+            "answer": "Industry",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Food waste that decomposes in a landfill releases ______, a greenhouse gas almost 25 times more harmful to the atmosphere than carbon dioxide?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Methane",
+            "is_correct": true
+          },
+          {
+            "answer": "Helium",
+            "is_correct": false
+          },
+          {
+            "answer": "Nitrogen",
+            "is_correct": false
+          },
+          {
+            "answer": "Argon",
+            "is_correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "event_id": 2,
+    "quiz_id": 2,
+    "child_mode": false,
+    "timer": 8,
+    "questions": [
+      {
+        "question": "Which of the following household appliances uses the most energy?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Refrigerator",
+            "is_correct": true
+          },
+          {
+            "answer": "Toaster",
+            "is_correct": false
+          },
+          {
+            "answer": "Dishwasher",
+            "is_correct": false
+          },
+          {
+            "answer": "Television",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "LED light bulbs use ______ less energy than a typical incandescent light bulb.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "25%",
+            "is_correct": false
+          },
+          {
+            "answer": "40%",
+            "is_correct": false
+          },
+          {
+            "answer": "50%",
+            "is_correct": false
+          },
+          {
+            "answer": "75%",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "____________ can add $100 per year to the energy bill of the average American household through wasted energy.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Air Conditioning",
+            "is_correct": false
+          },
+          {
+            "answer": "Vampire Loads",
+            "is_correct": true
+          },
+          {
+            "answer": "Outdoor Lightning",
+            "is_correct": false
+          },
+          {
+            "answer": "Bathroom Fans",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "What percent of Nashville’s residential landfill is made up of food scraps and yard clippings?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "70%",
+            "is_correct": false
+          },
+          {
+            "answer": "50%",
+            "is_correct": false
+          },
+          {
+            "answer": "32%",
+            "is_correct": true
+          },
+          {
+            "answer": "5%",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "How many gallons of water can a leaky faucet waste in one year?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "3000",
+            "is_correct": true
+          },
+          {
+            "answer": "300",
+            "is_correct": false
+          },
+          {
+            "answer": "30",
+            "is_correct": false
+          },
+          {
+            "answer": "3",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "The average person in Tennessee uses about ________ gallons of water per day?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "15",
+            "is_correct": false
+          },
+          {
+            "answer": "40",
+            "is_correct": false
+          },
+          {
+            "answer": "80",
+            "is_correct": true
+          },
+          {
+            "answer": "100",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Where does most of our drinking water come from in Nashville?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Groundwater Aquifer",
+            "is_correct": false
+          },
+          {
+            "answer": "Cumberland River",
+            "is_correct": true
+          },
+          {
+            "answer": "River Water shipped from another state",
+            "is_correct": false
+          },
+          {
+            "answer": "Man Made Lakes",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "On average, households waste what percentage of their food purchases?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "15%",
+            "is_correct": false
+          },
+          {
+            "answer": "20%",
+            "is_correct": false
+          },
+          {
+            "answer": "30%",
+            "is_correct": true
+          },
+          {
+            "answer": "40%",
+            "is_correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "event_id": 3,
+    "quiz_id": 3,
+    "child_mode": false,
+    "timer": 10,
+    "questions": [
+      {
+        "question": "Recycling 1 ton of paper saves __________.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "17 mature trees",
+            "is_correct": true
+          },
+          {
+            "answer": "7,000 gallons of water",
+            "is_correct": true
+          },
+          {
+            "answer": "3 cubic yards of landfill space",
+            "is_correct": true
+          },
+          {
+            "answer": "2 barrels of oil",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "The average office worker uses __________ sheets of copy paper each year.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "10k",
+            "is_correct": true
+          },
+          {
+            "answer": "5k",
+            "is_correct": false
+          },
+          {
+            "answer": "3k",
+            "is_correct": false
+          },
+          {
+            "answer": "1k",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "156 is the number of_______ that the average office worker uses each year.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Disposable Coffee Cups",
+            "is_correct": false
+          },
+          {
+            "answer": "Pens",
+            "is_correct": false
+          },
+          {
+            "answer": "Business Cards",
+            "is_correct": false
+          },
+          {
+            "answer": "Plastic Bottles",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "30% of all print jobs are never even picked up from the copier.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "True",
+            "is_correct": true
+          },
+          {
+            "answer": "False",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "20-30% of the average person's waste in a day consists of food scraps. Over the course of a month, the average person throws out around ___ pounds of food.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "13",
+            "is_correct": false
+          },
+          {
+            "answer": "23",
+            "is_correct": true
+          },
+          {
+            "answer": "33",
+            "is_correct": false
+          },
+          {
+            "answer": "43",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Companies with sustainability programs enjoy positive brand image as well as increased ____ among employees?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Productivity",
+            "is_correct": true
+          },
+          {
+            "answer": "Retention",
+            "is_correct": true
+          },
+          {
+            "answer": "Morale",
+            "is_correct": true
+          },
+          {
+            "answer": "Efficiency",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "Which of these items can be composted?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Paper Coffee Cups",
+            "is_correct": true
+          },
+          {
+            "answer": "Coffee Grounds",
+            "is_correct": true
+          },
+          {
+            "answer": "Plants",
+            "is_correct": true
+          },
+          {
+            "answer": "Orange Peels",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "Of the energy used annually in the US, approximately 5 percent is consumed by __________power.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Vampire",
+            "is_correct": true
+          },
+          {
+            "answer": "Ghost",
+            "is_correct": false
+          },
+          {
+            "answer": "Zombie",
+            "is_correct": false
+          },
+          {
+            "answer": "Frankenstein",
+            "is_correct": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "event_id": 4,
+    "quiz_id": 4,
+    "child_mode": true,
+    "timer": 3,
+    "questions": [
+      {
+        "question": "It’s estimated that nearly 480,000 school buses carry ___ million students to and from school every day of the school year.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "6",
+            "is_correct": false
+          },
+          {
+            "answer": "16",
+            "is_correct": false
+          },
+          {
+            "answer": "20",
+            "is_correct": false
+          },
+          {
+            "answer": "26",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "Nationally, schools waste $5 million per day in uneaten food.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "True",
+            "is_correct": true
+          },
+          {
+            "answer": "False",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "A recent study by the World Wildlife Fund estimated that as much as 45 million __________ were wasted in schools during 2019.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Pounds of Paper",
+            "is_correct": false
+          },
+          {
+            "answer": "Gallons of Milk",
+            "is_correct": true
+          },
+          {
+            "answer": "Tons of Food",
+            "is_correct": false
+          },
+          {
+            "answer": "Pounds of Plastic Waste",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Organics (including food) make up about 50% of a school&#39;s waste stream. What is the second leading component of a school&#39;s waste?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Glue Sticks",
+            "is_correct": false
+          },
+          {
+            "answer": "Art Supplies",
+            "is_correct": false
+          },
+          {
+            "answer": "Paper",
+            "is_correct": true
+          },
+          {
+            "answer": "Writing Utensils",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Of the more than 320 million people in America, what percentage go to a school in a day?",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "15",
+            "is_correct": false
+          },
+          {
+            "answer": "20",
+            "is_correct": true
+          },
+          {
+            "answer": "25",
+            "is_correct": false
+          },
+          {
+            "answer": "30",
+            "is_correct": false
+          }
+        ]
+      },
+      {
+        "question": "Poor ____________ in schools can cause discomfort and contribute to short- and long-term health problems for students and staff.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Lighting",
+            "is_correct": false
+          },
+          {
+            "answer": "Heating",
+            "is_correct": false
+          },
+          {
+            "answer": "Plumbing",
+            "is_correct": false
+          },
+          {
+            "answer": "Indoor Air Quality",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "K-12 schools in the U.S. spend over $6 billion a year on _________",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Food",
+            "is_correct": false
+          },
+          {
+            "answer": "Paper Supplies",
+            "is_correct": false
+          },
+          {
+            "answer": "Textbooks",
+            "is_correct": false
+          },
+          {
+            "answer": "Energy",
+            "is_correct": true
+          }
+        ]
+      },
+      {
+        "question": "Schools with __________reported significant increases in test scores, and progression in reading and math.",
+        "image": "https://picsum.photos/1000/600",
+        "value": 1,
+        "answers": [
+          {
+            "answer": "Sports",
+            "is_correct": false
+          },
+          {
+            "answer": "Natural Light",
+            "is_correct": true
+          },
+          {
+            "answer": "Clubs",
+            "is_correct": false
+          },
+          {
+            "answer": "Gardens",
+            "is_correct": false
+          }
+        ]
+      }
+    ]
+  }
+]
