@@ -1,5 +1,4 @@
 # Urban Green Lab Gameventify
-<a href="https://urban-green-lab-app.netlify.app/"><img src="https://raw.githubusercontent.com/Urban-Green-Lab/h4tc-ugl-app-fe/master/documentation/images/placeholder-banner.png" title="UGL App H4TC" alt="UGL App H4TC Banner"></a>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d7812091-21b8-4a63-8044-a72b7a933934/deploy-status)](https://app.netlify.com/sites/uglapp/deploys)
 
