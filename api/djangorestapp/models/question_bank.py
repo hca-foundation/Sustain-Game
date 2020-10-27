@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class QuestionBank(models.Model):
     """Question Bank Model
 
@@ -14,7 +15,6 @@ class QuestionBank(models.Model):
     value = models.IntegerField(default=1)
     info_link = models.URLField(max_length=200, blank=True, null=True)
 
-
     class Meta:
         ordering = ["question"]
         verbose_name_plural = "Question Banks"
@@ -24,5 +24,3 @@ class QuestionBank(models.Model):
 
     def __unicode__(self):
         return self.question
-
-    

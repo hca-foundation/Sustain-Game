@@ -1,8 +1,9 @@
 from django.db import models
 
+
 class QuizBank(models.Model):
     """Quiz Bank Model
-    
+
     Description: Stores a single quiz for the quiz bank
 
     Fields
