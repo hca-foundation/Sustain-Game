@@ -30,6 +30,7 @@
   "event_id": "int",
   "quiz_id": "int",
   "child_mode": "bool",
+  "question_id": "int",
   "timer": "int (min)", 
   "questions": [
     {
