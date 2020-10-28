@@ -3,7 +3,7 @@ from safedelete.models import SafeDeleteModel
 from safedelete.models import HARD_DELETE_NOCASCADE
 
 
-class QuizBank(models.Model):
+class QuizBank(SafeDeleteModel):
     """Quiz Bank Model
 
     Description: Stores a single quiz for the quiz bank

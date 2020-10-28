@@ -2,6 +2,7 @@ from django.db import models
 from safedelete.models import SafeDeleteModel
 from safedelete.models import HARD_DELETE_NOCASCADE
 
+
 class Event(SafeDeleteModel):
     """Event Model
 
