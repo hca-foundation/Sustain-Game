@@ -16,7 +16,7 @@ class QuestionBankAnswer(models.Model):
     answer = models.CharField(max_length=255)
     is_correct = models.BooleanField(default=False)
     question_bank = models.ForeignKey(
-        QuestionBank, related_name="questions", on_delete=models.CASCADE)
+        QuestionBank, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["answer"]
