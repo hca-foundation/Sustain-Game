@@ -12,7 +12,10 @@ def get_active_event_info(request):
         seralized_data = ActiveEventSerializer(active_event)
         return Response(seralized_data.data)
     except Exception as error:
-        return Response({"detail": f"{error}"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(
+            {"detail": "{e}".format(e=error)}, 
+            status=status.HTTP_404_NOT_FOUND
+        )
 
 
 class ActiveEventSerializer(serializers.Serializer):

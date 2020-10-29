@@ -23,7 +23,10 @@ def get_leaderboard(request):
         # get the top 5 quiz takers
         return Response(serializer.data)
     except Exception as error:
-        return Response({"detail": f"{error}"}, status=status.HTTP_404_NOT_FOUND)
+        return Response(
+            {"detail": "{e}".format(e=error)},
+            status=status.HTTP_404_NOT_FOUND
+        )
 
 
 class QuizTakerSerializer(serializers.ModelSerializer):
