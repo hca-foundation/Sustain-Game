@@ -86,14 +86,21 @@ $ createdb postgres
 # Create user postgres on database
 $ createuser -s postgres
 
-# Start server
+# Start server 
 $ python manage.py runserver
+# navigate to http://127.0.0.1:8000/admin. You should see a login screen
 
-# Make migrations
-$ python manage.py makemigrations
-
-# Migrate
+# Migrate (make sure you are in the api directory)
 $ python manage.py migrate
+
+# Create Super User
+$ python manage.py createsuperuser
+
+Username (leave blank to use 'YOUR_USER_NAME'): PRESS ENTER
+Email address: PRESS ENTER
+Password: 1234
+Password (again): 1234
+Bypass password validation and create user anyway? [y/N]: y
 ```
 ***Be sure to stop your db server when not developing use this command***
 ```shell
