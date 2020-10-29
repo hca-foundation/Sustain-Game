@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Countdown extends Component {
   state = {
@@ -30,7 +31,7 @@ export default class Countdown extends Component {
   };
 
   renderonDOM = () => {
-    const some = this.state.count > 0 ? <><h1 className='crazyTimer'>{this.format(this.state.count)}</h1><button disabled>This is something</button></> : <><h1>0</h1><button>This is something</button></>;
+    const some = this.state.count > 0 ? <><h1 className='crazyTimer'>{this.format(this.state.count)}</h1><button disabled className='btn btn-dark'>Let's Play</button></> : <><h1>0</h1><Link to='./questions/1' className="btn btn-dark">Let's Play</Link></>;
     return some;
   };
 
