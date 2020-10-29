@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Form, FormGroup, Label, Input,
+  Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
 
 export default class Home extends Component {
@@ -21,13 +20,14 @@ export default class Home extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem('user', JSON.stringify(this.state));
+    this.props.history.push('/countdown');
   }
 
   render() {
     return (
       <>
         <h1>Before we begin</h1>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} >
           <FormGroup>
             <Label for="fname">First Name <span className="form-required">*</span></Label>
             <Input onChange={this.handleChange} type="text" name="fname" id="fname" placeholder="First Name" required/>
@@ -44,7 +44,7 @@ export default class Home extends Component {
             <Label for="lname">Zip Code <span className="form-required">*</span></Label>
             <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxLength="5" required/>
           </FormGroup>
-          <Link to='./countdown' className='btn btn-dark'>Get Ready</Link>
+          <Button className='btn btn-dark'>Get Ready</Button>
         </Form>
       </>
     );
