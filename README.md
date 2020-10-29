@@ -31,7 +31,7 @@ There is a backend admin site as well as a user application for game play, which
   - Python
   - Django Admin for Admin portal for creating events and quizzes
 - **Deployment**
-  - FE - Netlify
+  - FE - Netlify 
   - BE - Heroku
 - **Styles**
   - SASS
