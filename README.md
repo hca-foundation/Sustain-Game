@@ -11,7 +11,7 @@ This application is used to create quizzes that can be administered at events or
 There is a backend admin site as well as a user application for game play, which also includes a leaderboard.
 
 ## Table of Contents
-
+- [Tech Stack](#tech-stack)
 - [Features](#features-tech-roadmap)
 - [Get Started Developing](#get-started)
 - [Clone Repo](#clone-the-repo)
@@ -21,6 +21,19 @@ There is a backend admin site as well as a user application for game play, which
 - [Data Structure/ERD](#data-structureerd)
 - [Contributors](#contributors)
 
+## Tech Stack:
+- **Frontend:**
+  - ReactJS
+  - Redux for state management
+- **Backend**
+  - Python
+  - Django Admin for Admin portal for creating events and quizzes
+- **Deployment**
+  - FE - Netlify
+  - BE - Heroku
+- **Styles**
+  - SASS
+  - [Reactstrap](https://reactstrap.github.io/)
 
 ## Features (Tech Roadmap)
 - Child mode
@@ -128,25 +141,28 @@ We are deploying the FE and BE separately to decouple the deployments and update
 
 ## Contributors
 ### Team Leads
-| <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez <br />Tech Lead**</a> | <a href="https://github.com/meg723" target="_blank">**Meg Underwood <br />Project Manager**</a> |
-| :---: |:---:|
+- <a href="https://github.com/meg723" target="_blank">**Meg Underwood (Project Manager)**</a>
+- <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez (Tech Lead)**</a>
 
 ### UX/UI
-| <a href="https://github.com/bdoves" target="_blank">**Bodhi Stewart**</a> |
-| :---: |
+- <a href="https://github.com/bdoves" target="_blank">**Bodhi Stewart**</a>
+
 
 ### Designers
-| <a href="https://github.com/ryan-firm" target="_blank">**Ryan Firm**</a> | <a href="#" target="_blank">**Nick	Miller**</a> |
-| :---: |:---:| 
+- <a href="https://github.com/ryan-firm" target="_blank">**Ryan Firm**</a>
+- <a href="#" target="_blank">**Nick	Miller**</a>
 
 ### Front End Engineers
-| <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez**</a> | <a href="https://github.com/prafullatass" target="_blank">**Prafullata	Sonawane**</a> | <a href="https://github.com/jeremybdavis" target="_blank">**Jeremy	Davis**</a> | <a href="https://github.com/vieraruben" target="_blank">**Ruben Viera**</a> |
-| :---: |:---:| :---:| :---:|
+- <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez**</a>
+- <a href="https://github.com/prafullatass" target="_blank">**Prafullata	Sonawane**</a>
+- <a href="https://github.com/jeremybdavis" target="_blank">**Jeremy	Davis**</a>
+- <a href="https://github.com/vieraruben" target="_blank">**Ruben Viera**</a>
 
 ### Back End Engineers
-| <a href="https://github.com/RefreshingChi" target="_blank">**Chiitra Tibbs**</a> | <a href="https://github.com/hannahhall" target="_blank">**Hannah Hall**</a> | <a href="https://github.com/TrinityTerry" target="_blank">**Trinity Christiana**</a> |
-| :---: |:---:| :---:|
+- <a href="https://github.com/TrinityTerry" target="_blank">**Trinity Christiana**</a>
+- <a href="https://github.com/RefreshingChi" target="_blank">**Chiitra Tibbs**</a>
+- <a href="https://github.com/hannahhall" target="_blank">**Hannah Hall**</a>
 
 ### QA
-| <a href="#" target="_blank">**Ankaj	Goel**</a> | <a href="#" target="_blank">**Summer	Perkey**</a> |
-| :---: |:---:|
+- <a href="#" target="_blank">**Ankaj	Goel**</a>
+- <a href="#" target="_blank">**Summer	Perkey**</a>
