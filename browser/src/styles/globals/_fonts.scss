@@ -1,3 +1,13 @@
-h1 {
-  color: $font-main;
+@font-face {
+  font-family: "GT Walsheim Pro Black";
+  src: url(../fonts/GT-Walsheim-Pro-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Domaine Text Bold";
+  src: url(../fonts/DomaineText-Bold.otf) format("opentype");
+}
+
+p {
+  font-family: "Domaine Text Bold";
 }

@@ -1,0 +1,19 @@
+.btn {
+  font-family: "GT Walsheim Pro Black";
+  font-size: 17px;
+  border-radius: 0;
+  border: 4px solid $asphalt-black;
+  width: 250px;
+  max-width: 100%;
+  margin: 5px 0;
+  padding: 15px 0;
+}
+
+.btn-dark {
+  background-color: $asphalt-black;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  color: $asphalt-black;
+}
