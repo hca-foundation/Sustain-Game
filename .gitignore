@@ -7,3 +7,5 @@
 !.vscode/extensions.json 
 .history
 .DS_Store
+
+package-lock.json
