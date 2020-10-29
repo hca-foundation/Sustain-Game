@@ -40,7 +40,7 @@ export default class Home extends Component {
           <Label for="lname">Zip Code (Optional)</Label>
           <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxlength="5"/>
         </FormGroup>
-        <Button>Submit</Button>
+        <Button>Get Ready</Button>
       </Form>
     );
   }
