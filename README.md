@@ -165,5 +165,5 @@ We are deploying the FE and BE separately to decouple the deployments and update
 - <a href="https://github.com/hannahhall" target="_blank">**Hannah Hall**</a>
 
 ### QA
-- <a href="#" target="_blank">**Ankaj	Goel**</a>
+- <a href="https://github.com/ankajgoel" target="_blank">**Ankaj	Goel**</a>
 - <a href="#" target="_blank">**Summer	Perkey**</a>
