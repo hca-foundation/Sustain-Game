@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import {
   Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
@@ -17,8 +18,10 @@ export default class Home extends Component {
     });
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     localStorage.setItem('user', JSON.stringify(this.state));
+    window.location.href = './splash';
   }
 
   render() {
