@@ -3,6 +3,8 @@ import {
   Button, Modal, ModalHeader, ModalBody,
 } from 'reactstrap';
 import sustaingame from '../../images/sustaingame.png';
+import number1 from '../../images/number1.png';
+import number2 from '../../images/number2.png';
 
 const GameModal = (props) => {
   const {
@@ -25,7 +27,12 @@ const GameModal = (props) => {
         <ModalBody>
           <img src={sustaingame} alt="sustain game" class="sustaingame-img"/>
           <h1>How to Play</h1>
+          <img src={number1} alt="1" class="modal-number"/>
+
           <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
+
+          <img src={number2} alt="1" class="modal-number"/>
+
           <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
         </ModalBody>
       </Modal>
