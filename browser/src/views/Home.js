@@ -39,8 +39,8 @@ export default class Home extends Component {
             <Input onChange={this.handleChange} type="email" name="email" id="email" placeholder="youremail@email.com" required/>
           </FormGroup>
           <FormGroup>
-            <Label for="lname">Zip Code (Optional)</Label>
-            <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxlength="5"/>
+            <Label for="lname">Zip Code <span className="form-required">*</span></Label>
+            <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxlength="5" required/>
           </FormGroup>
           <Button>Get Ready</Button>
         </Form>
