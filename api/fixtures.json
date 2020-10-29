@@ -1,0 +1,388 @@
+[
+  {
+    "model": "djangorestapp.questionbank",
+    "pk": 1,
+    "fields": {
+      "question": "Which energy source do we use the most for electricity in Tennessee?",
+      "image": "https://picsum.photos/1000/600",
+      "info_link": "google.com",
+      "value": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbank",
+    "pk": 2,
+    "fields": {
+      "question": "WWhat percentage of food in the US goes uneaten?",
+      "image": "https://picsum.photos/1000/600",
+      "info_link": "google.com",
+      "value": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbank",
+    "pk": 3,
+    "fields": {
+      "question": "Which of these is an effective way to reduce your carbon footprint?",
+      "image": "https://picsum.photos/1000/600",
+      "info_link": "google.com",
+      "value": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbank",
+    "pk": 4,
+    "fields": {
+      "question": "What sector was the largest source of greenhouse gas emissions in 2017?",
+      "image": "https://picsum.photos/1000/600",
+      "info_link": "google.com",
+      "value": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbank",
+    "pk": 5,
+    "fields": {
+      "question": "Food waste that decomposes in a landfill releases ______, a greenhouse gas almost 25 times more harmful to the atmosphere than carbon dioxide?",
+      "image": "https://picsum.photos/1000/600",
+      "info_link": "google.com",
+      "value": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 1,
+    "fields": {
+      "answer": "Coal",
+      "is_correct": false,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 2,
+    "fields": {
+      "answer": "Nuclear",
+      "is_correct": true,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 3,
+    "fields": {
+      "answer": "Solar",
+      "is_correct": false,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 4,
+    "fields": {
+      "answer": "Natural Gas",
+      "is_correct": false,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 5,
+    "fields": {
+      "answer": "Hydroelectric",
+      "is_correct": false,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 6,
+    "fields": {
+      "answer": "20%",
+      "is_correct": false,
+      "question_bank": 2
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 7,
+    "fields": {
+      "answer": "25%",
+      "is_correct": false,
+      "question_bank": 2
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 8,
+    "fields": {
+      "answer": "30%",
+      "is_correct": false,
+      "question_bank": 2
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 9,
+    "fields": {
+      "answer": "40%",
+      "is_correct": true,
+      "question_bank": 2
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 10,
+    "fields": {
+      "answer": "Taking a train, bus, or bike instead of driving",
+      "is_correct": true,
+      "question_bank": 3
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 11,
+    "fields": {
+      "answer": "Eating less meat",
+      "is_correct": false,
+      "question_bank": 3
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 12,
+    "fields": {
+      "answer": "Purchasing energy efficient appliances",
+      "is_correct": false,
+      "question_bank": 3
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 13,
+    "fields": {
+      "answer": "Replacing your light bulbs with LED’s",
+      "is_correct": false,
+      "question_bank": 3
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 14,
+    "fields": {
+      "answer": "Electricity Production",
+      "is_correct": false,
+      "question_bank": 4
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 15,
+    "fields": {
+      "answer": "Agriculture",
+      "is_correct": false,
+      "question_bank": 4
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 16,
+    "fields": {
+      "answer": "Transportation",
+      "is_correct": true,
+      "question_bank": 4
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 17,
+    "fields": {
+      "answer": "Industry",
+      "is_correct": false,
+      "question_bank": 4
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 18,
+    "fields": {
+      "answer": "Methane",
+      "is_correct": true,
+      "question_bank": 5
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 19,
+    "fields": {
+      "answer": "Helium",
+      "is_correct": false,
+      "question_bank": 5
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 20,
+    "fields": {
+      "answer": "Nitrogen",
+      "is_correct": false,
+      "question_bank": 5
+    }
+  },
+  {
+    "model": "djangorestapp.questionbankanswer",
+    "pk": 21,
+    "fields": {
+      "answer": "Argon",
+      "is_correct": false,
+      "question_bank": 5
+    }
+  },
+  {
+    "model": "djangorestapp.quizbank",
+    "pk": 1,
+    "fields": {
+      "name": "Work",
+      "timer": 5
+    }
+  },
+  {
+    "model": "djangorestapp.event",
+    "pk": 1,
+    "fields": {
+      "name": "Christimas 2020",
+      "active": true,
+      "child_mode": false,
+      "date": "2020-12-25"
+    }
+  },
+
+  {
+    "model": "djangorestapp.eventquiz",
+    "pk": 1,
+    "fields": {
+      "event": 1,
+      "quiz": 1
+    }
+  },
+
+  {
+    "model": "djangorestapp.quizquestion",
+    "pk": 1,
+    "fields": {
+      "quiz_bank": 1,
+      "question_bank": 1
+    }
+  },
+  {
+    "model": "djangorestapp.quizquestion",
+    "pk": 1,
+    "fields": {
+      "quiz_bank": 1,
+      "question_bank": 2
+    }
+  },
+  {
+    "model": "djangorestapp.quizquestion",
+    "pk": 1,
+    "fields": {
+      "quiz_bank": 1,
+      "question_bank": 3
+    }
+  },
+  {
+    "model": "djangorestapp.quizquestion",
+    "pk": 1,
+    "fields": {
+      "quiz_bank": 1,
+      "question_bank": 4
+    }
+  },
+  {
+    "model": "djangorestapp.quizquestion",
+    "pk": 1,
+    "fields": {
+      "quiz_bank": 1,
+      "question_bank": 5
+    }
+  },
+
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 1,
+    "fields": {
+      "email": "trin@me.com",
+      "fname": "Trinity",
+      "lname": "Terry",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 14,
+      "initials": "TCT"
+    }
+  },
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 2,
+    "fields": {
+      "email": "gtif@me.com",
+      "fname": "Gina",
+      "lname": "Tiffany",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 4,
+      "initials": "GFT"
+    }
+  },
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 3,
+    "fields": {
+      "email": "oliver@me.com",
+      "fname": "Oliver",
+      "lname": "Green",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 3,
+      "initials": "OCG"
+    }
+  },
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 4,
+    "fields": {
+      "email": "renee@me.com",
+      "fname": "Renee",
+      "lname": "Thompson",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 25,
+      "initials": "RET"
+    }
+  },
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 5,
+    "fields": {
+      "email": "john@me.com",
+      "fname": "Lennon",
+      "lname": "John",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 25,
+      "initials": "JJL"
+    }
+  },
+  {
+    "model": "djangorestapp.quiztaker",
+    "pk": 6,
+    "fields": {
+      "email": "johns@me.com",
+      "fname": "John",
+      "lname": "Smith",
+      "event": 1,
+      "quiz_bank": 1,
+      "score": 25,
+      "initials": "JAS"
+    }
+  }
+]
