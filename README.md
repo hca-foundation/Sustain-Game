@@ -1,5 +1,7 @@
 # Urban Green Lab Gameventify
 
+![Urban Green Lab Banner](./UGL_banner.png)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d7812091-21b8-4a63-8044-a72b7a933934/deploy-status)](https://app.netlify.com/sites/uglapp/deploys)
 
 [Development Site](https://uglapp.netlify.app)
