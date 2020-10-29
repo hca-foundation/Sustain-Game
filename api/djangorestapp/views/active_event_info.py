@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from rest_framework import serializers, status
 from djangorestapp.models import Event, EventQuiz, QuizQuestion, QuestionBankAnswer
 from django.shortcuts import get_object_or_404, get_list_or_404
