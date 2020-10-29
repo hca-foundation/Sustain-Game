@@ -12,7 +12,7 @@ There is a backend admin site as well as a user application for game play, which
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features](#features-tech-roadmap)
 - [Get Started Developing](#get-started)
 - [Clone Repo](#clone-the-repo)
 - [Installs](#installs)
