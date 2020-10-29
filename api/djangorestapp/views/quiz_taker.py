@@ -12,7 +12,7 @@ def post_quiz_taker(request):
         is_valid = serialized_data.is_valid()
         if not is_valid:
             return Response(
-                {"detail": serialized_data.errors}, 
+                {"detail": serialized_data.errors},
                 status=status.HTTP_400_BAD_REQUEST
             )
         serialized_data.save()

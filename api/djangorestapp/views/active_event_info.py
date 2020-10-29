@@ -1,5 +1,10 @@
 from rest_framework import serializers, status
-from djangorestapp.models import Event, EventQuiz, QuizQuestion, QuestionBankAnswer
+from djangorestapp.models import (
+    Event,
+    EventQuiz,
+    QuizQuestion,
+    QuestionBankAnswer
+)
 from django.shortcuts import get_object_or_404, get_list_or_404
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -13,7 +18,7 @@ def get_active_event_info(request):
         return Response(seralized_data.data)
     except Exception as error:
         return Response(
-            {"detail": "{e}".format(e=error)}, 
+            {"detail": "{e}".format(e=error)},
             status=status.HTTP_404_NOT_FOUND
         )
 
@@ -44,8 +49,11 @@ class ActiveEventSerializer(serializers.Serializer):
             current_q = dict(question["question_bank"])
             id = current_q["id"]
             current_q["question_id"] = id
-            current_q["answers"] = QuestionBankAnswerSerializer(get_list_or_404(
-                QuestionBankAnswer, question_bank_id=id), many=True).data
+            current_q["answers"] = QuestionBankAnswerSerializer(
+                get_list_or_404(
+                    QuestionBankAnswer, question_bank_id=id
+                ), many=True
+            ).data
             del current_q["id"]
             questions.append(current_q)
         return questions
