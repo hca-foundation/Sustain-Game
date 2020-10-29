@@ -17,15 +17,17 @@ export default class Home extends Component {
     });
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     localStorage.setItem('user', JSON.stringify(this.state));
+    this.props.history.push('/countdown');
   }
 
   render() {
     return (
       <>
         <h1>Before we begin</h1>
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} >
           <FormGroup>
             <Label for="fname">First Name <span className="form-required">*</span></Label>
             <Input onChange={this.handleChange} type="text" name="fname" id="fname" placeholder="First Name" required/>
@@ -40,9 +42,9 @@ export default class Home extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="lname">Zip Code <span className="form-required">*</span></Label>
-            <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxlength="5" required/>
+            <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxLength="5" required/>
           </FormGroup>
-          <Button>Get Ready</Button>
+          <Button className='btn btn-dark'>Get Ready</Button>
         </Form>
       </>
     );

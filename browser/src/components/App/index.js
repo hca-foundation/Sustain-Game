@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import getActiveEventQuestions from '../../data/getActiveEvent';
 import Home from '../../views/Home';
 import Splash from '../../views/Splash';
+import Countdown from '../../views/Countdown';
 
 export default class App extends Component {
   state = {
@@ -30,6 +31,11 @@ export default class App extends Component {
             path='/info'
             exact
             component={Home}
+          />
+          <Route
+            path='/countdown'
+            exact
+            component={Countdown}
           />
         </Switch>
       </BrowserRouter>

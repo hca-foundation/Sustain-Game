@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { Button } from 'reactstrap';
 import Modal from '../components/Modal';
 
 export default class Splash extends Component {
