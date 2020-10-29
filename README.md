@@ -107,8 +107,14 @@ $ pg_stop
 - Once the feature has been fully tested with all other code, a PR is created against `master` and merged into production.
 
 ### Deployment
-<!-- TODO: Netlify  -->
-COMING SOON
+We are deploying the FE and BE separately to decouple the deployments and updates.
+
+**Frontend**
+- For UGL, we chose Netlify, a free resource. Here is a [step-by-step guide](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) to get that set up. There is continuous deployment set up for the production branch. Netlify also offers deployment logs, rollbacks, and branch deploys for testing.
+
+**Backend**
+- We are deploying on Heroku
+- INSTRUCTIONS COMING SOON
 
 ### Data Structure/ERD
 [![ERD](./ugl_erd.png)](https://dbdiagram.io/d/5f95f1fa3a78976d7b79179a)
