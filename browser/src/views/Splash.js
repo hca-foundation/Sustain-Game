@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { Button } from 'reactstrap';
 import Modal from '../components/Modal';
 import question from '../images/question.png';
 import sustaingame from '../images/sustaingame.png';
