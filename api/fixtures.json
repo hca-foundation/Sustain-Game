@@ -247,6 +247,14 @@
     }
   },
   {
+    "model": "djangorestapp.quizbank",
+    "pk": 2,
+    "fields": {
+      "name": "Chritmas",
+      "timer": 5
+    }
+  },
+  {
     "model": "djangorestapp.event",
     "pk": 1,
     "fields": {
@@ -256,7 +264,16 @@
       "date": "2020-12-25"
     }
   },
-
+  {
+    "model": "djangorestapp.event",
+    "pk": 2,
+    "fields": {
+      "name": "Christimas 2019",
+      "active": false,
+      "child_mode": false,
+      "date": "2019-12-25"
+    }
+  },
   {
     "model": "djangorestapp.eventquiz",
     "pk": 1,
@@ -270,13 +287,13 @@
     "model": "djangorestapp.quizquestion",
     "pk": 1,
     "fields": {
-      "quiz_bank": 1,
+      "quiz_bank": 2,
       "question_bank": 1
     }
   },
   {
     "model": "djangorestapp.quizquestion",
-    "pk": 1,
+    "pk": 2,
     "fields": {
       "quiz_bank": 1,
       "question_bank": 2
@@ -284,7 +301,7 @@
   },
   {
     "model": "djangorestapp.quizquestion",
-    "pk": 1,
+    "pk": 3,
     "fields": {
       "quiz_bank": 1,
       "question_bank": 3
@@ -292,7 +309,7 @@
   },
   {
     "model": "djangorestapp.quizquestion",
-    "pk": 1,
+    "pk": 4,
     "fields": {
       "quiz_bank": 1,
       "question_bank": 4
@@ -300,7 +317,7 @@
   },
   {
     "model": "djangorestapp.quizquestion",
-    "pk": 1,
+    "pk": 5,
     "fields": {
       "quiz_bank": 1,
       "question_bank": 5
