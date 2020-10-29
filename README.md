@@ -57,7 +57,7 @@ $ git clone git@github.com:Urban-Green-Lab/application.git
 $ cd application
 ```
 
-### Installs
+## Installs
 #### Front-End Development
 ```shell
 $ cd browser
@@ -120,13 +120,14 @@ Bypass password validation and create user anyway? [y/N]: y
 $ pg_stop
 ```
 
-### Code Reviews
+<!-- TODO: REMOVE FOR PRODUCTION -->
+## Code Reviews
 - Create a branch for the issue you are working on and create all PRs against the `development` branch.
   - A preview deploy will be created for testing
   - Once approved by 2 reviewers, you can merge into development
 - Once the feature has been fully tested with all other code, a PR is created against `master` and merged into production.
 
-### Deployment
+## Deployment
 We are deploying the FE and BE separately to decouple the deployments and updates.
 
 **Frontend**
@@ -136,7 +137,7 @@ We are deploying the FE and BE separately to decouple the deployments and update
 - We are deploying on Heroku
 - INSTRUCTIONS COMING SOON
 
-### Data Structure/ERD
+## Data Structure/ERD
 [![ERD](./ugl_erd.png)](https://dbdiagram.io/d/5f95f1fa3a78976d7b79179a)
 
 ## Contributors
