@@ -38,7 +38,7 @@ export default class Home extends Component {
         </FormGroup>
         <FormGroup>
           <Label for="lname">Zip Code (Optional)</Label>
-          <Input onChange={this.handleChange} type="number" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" />
+          <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" placeholder="Zip Code" maxlength="5"/>
         </FormGroup>
         <Button>Submit</Button>
       </Form>
