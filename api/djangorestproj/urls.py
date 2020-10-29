@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from djangorestapp.admin import admin_site
+from djangorestapp import views
 
 urlpatterns = [
     path('admin/', admin_site.urls),
+    path('active_event_info/', views.get_active_event_info),
+    path('quiz_taker/', views.post_quiz_taker),
+    path('leaderboard/', views.get_leaderboard)
 ]
