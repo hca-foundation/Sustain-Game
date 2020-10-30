@@ -29,11 +29,11 @@ const GameModal = (props) => {
           <h1>How to Play</h1>
           <img src={number1} alt="1" className="modal-number"/>
 
-          <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
+          <p style={{ textAlign: 'center' }}>Players will have 10 seconds to answer each question. The faster you answer the more points you’ll receive!</p>
 
-          <img src={number2} alt="1" className="modal-number"/>
+          <img src={number2} alt="2" className="modal-number"/>
 
-          <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
+          <p style={{ textAlign: 'center' }}>Once all questions have been answered, players will be asked to add their initials to the leaderboard and winner information will be displayed on the leaderboard and will show players personal results and rank.</p>
         </ModalBody>
       </Modal>
     </div>

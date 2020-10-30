@@ -30,7 +30,7 @@ function ScoresTable(props) {
   return (
     <Table borderless>
       <tbody>
-        {props.scores.map((s, i) => <tr>
+        {props.scores.map((s, i) => <tr key={i}>
         <th scope="row">{i + 1}</th>
         <td>{s.intials}</td>
         <td>{s.score}</td>
