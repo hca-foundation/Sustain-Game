@@ -40,7 +40,7 @@ function ScoresTable(props) {
     <Table borderless>
       <tbody>
         {props.scores.map((s, i) => <tr key={i}>
-        <td></td>
+        <td>{i === 0 ? <>&#129351;</> : '' } { i === 1 ? <>&#129352;</> : '' } {i === 2 ? <>&#129353;</> : ''}</td>
         <th scope="row">{i + 1}</th>
         <th scope="row">{s.initials}</th>
         <td className='align-right'>{s.score}pts</td>
