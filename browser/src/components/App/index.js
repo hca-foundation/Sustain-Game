@@ -7,6 +7,7 @@ import Score from '../../views/Score';
 import Thanks from '../../views/Thanks';
 import Initials from '../../views/Initials';
 import Quiz from '../../views/Quiz';
+import Leaderboard from '../../views/Leaderboard';
 
 export default class App extends Component {
   render() {
@@ -47,6 +48,11 @@ export default class App extends Component {
             exact
             path="/quiz/:id"
             component={(props) => <Quiz {...props} />}
+            />
+            <Route
+            path='/leaderboard'
+            exact
+            component={Leaderboard}
           />
         </Switch>
       </BrowserRouter>
