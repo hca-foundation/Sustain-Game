@@ -74,12 +74,12 @@ export default class Quiz extends Component {
       if (this.state.questions.length >= Number(id) + 1) {
         document.querySelector('.c').classList.remove('correct');
         document.querySelector(`#button-${i}`).classList.remove('wrong');
-        const bonusPoints = this.state.count * 100;
-        const score = qpoints ? bonusPoints + this.state.questions[id].value : 0;
+        const bonusPoints = this.state.count * 10;
+        const score = qpoints ? bonusPoints + 0 : 0;
         this.setState({
           score: this.state.score + score,
           is_correct: qpoints,
-          current_value: this.state.questions[id].value,
+          current_value: 0,
           current_bp: bonusPoints,
           count: this.state.timer,
         });
