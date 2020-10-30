@@ -60,11 +60,13 @@
     background-color: transparent;
     color: $asphalt-black;
 
-    &:hover,
-    &:focus {
-      background-color: $asphalt-black;
-      border: 4px solid $asphalt-black;
-      color: $white;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover,
+      &:focus {
+        background-color: $asphalt-black;
+        border: 4px solid $asphalt-black;
+        color: $white;
+      }
     }
   }
 

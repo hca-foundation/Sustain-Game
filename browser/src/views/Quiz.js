@@ -97,6 +97,7 @@ export default class Quiz extends Component {
             if (this.state.questions.length > Number(id) + 1) {
               document.querySelector('.c').classList.remove('correct');
               document.querySelector(`#button-${i}`).classList.remove('wrong');
+              document.querySelector(`#button-${i}`).blur();
               this.props.history.push(`./${Number(id) + 1}`);
             } else {
               localStorage.setItem('score', JSON.stringify(this.state.score));
@@ -118,6 +119,7 @@ export default class Quiz extends Component {
             if (this.state.questions.length > Number(id) + 1) {
               document.querySelector('.c').classList.remove('correct');
               document.querySelector(`#button-${i}`).classList.remove('wrong');
+              document.querySelector(`#button-${i}`).blur();
               this.props.history.push(`./${Number(id) + 1}`);
             } else {
               localStorage.setItem('score', JSON.stringify(this.state.score));
