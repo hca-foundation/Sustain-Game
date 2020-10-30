@@ -161,7 +161,7 @@ export default class Quiz extends Component {
   renderonDOM = () => {
     const some = <>
           {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
-          <div className='container'>{this.renderMiddleSection()}</div>
+          {this.state.questions.length > 0 ? <div className='container'>{this.renderMiddleSection()}</div> : 'Loading' }
           {this.state.questions.length > 0 && <div className='answer-column'>{this.renderAnswerButtons()}
           </div>}
         </>;
