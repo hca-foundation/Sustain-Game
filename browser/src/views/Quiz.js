@@ -46,11 +46,34 @@ export default class Quiz extends Component {
     });
   };
 
+  runIt = (id, qpoints) => {
+    if (this.state.questions.length > Number(id) + 1) {
+      const bonusPoints = this.state.questions[id].value + (this.state.count * 100);
+      const score = qpoints ? bonusPoints : 0;
+      this.setState({
+        score: this.state.score + score,
+        count: this.state.timer,
+      });
+
+      if (qpoints) {
+        <CorrectAnswer question={this.state.questions[id]} />;
+        this.props.history.push(`./answer/${Number(id)}`);
+      }
+      // this.props.history.push(`./answer/${Number(id) + 1}`);
+    } else {
+      localStorage.setItem('score', JSON.stringify(this.state.score));
+      this.props.history.push('/score');
+    }
+  };
+
   renderonDOM = () => {
     const some = this.state.count > 0 ? (
         <>
+          {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
           <h1 className='crazyTimer'>{this.format(this.state.count)}</h1>
-        </>) : this.state.history.push('./next');
+          {this.state.questions.length > 0 && <div className='answer-column'>
+          <Answers a={this.state.questions[this.props.match.params.id].answers} click={this.runIt} id={this.props.match.params.id} /></div>}
+        </>) : <CorrectAnswer question={this.state.questions[this.props.match.params.id]} />;
     return some;
   };
 
@@ -60,32 +83,18 @@ export default class Quiz extends Component {
   };
 
   render() {
-    const runIt = (id, qpoints) => {
-      if (this.state.questions.length > Number(id) + 1) {
-        const score = qpoints ? this.state.questions[id].value + (this.state.count * 100) : 0;
-        this.setState({
-          score: this.state.score + score,
-          count: this.state.timer,
-        });
-
-        this.props.history.push(`./${Number(id) + 1}`);
-      } else {
-        localStorage.setItem('score', JSON.stringify(this.state.score));
-        this.props.history.push('/score');
-      }
-    };
-
     return (
       <div>
         <div className="quiz-header">
         <div>{Number(this.props.match.params.id) + 1} / {this.state.questions.length}</div>
         <div>{this.state.score}pts</div>
         </div>
-        {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
         <div className='container'>{this.state.count > 0 && this.renderonDOM()}</div>
-        {this.state.questions.length > 0 && <div className='answer-column'>
-          <Answers a={this.state.questions[this.props.match.params.id].answers} click={runIt} id={this.props.match.params.id} /></div>}
       </div>
     );
   }
+}
+
+function CorrectAnswer(props) {
+  console.warn(props.question);
 }

@@ -33,6 +33,11 @@ export default class App extends Component {
           />
           <Route
             exact
+            path="/quiz/answer/:id"
+            component={(props) => <Quiz {...props} />}
+          />
+          <Route
+            exact
             path="/score"
             component={Score}
           />
