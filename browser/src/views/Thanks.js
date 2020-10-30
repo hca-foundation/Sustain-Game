@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import UglLogo from '../images/UglLogo.png';
 
