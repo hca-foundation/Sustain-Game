@@ -5,6 +5,7 @@ import Splash from '../../views/Splash';
 import Countdown from '../../views/Countdown';
 import Quiz from '../../views/Quiz';
 import Score from '../../views/Score';
+// import CorrectAnswer from '../../views/CorrectAnswer';
 
 export default class App extends Component {
   render() {
@@ -31,11 +32,11 @@ export default class App extends Component {
             path="/quiz/:id"
             component={(props) => <Quiz {...props} />}
           />
-          <Route
+          {/* <Route
             exact
-            path="/quiz/answer/:id"
-            component={(props) => <Quiz {...props} />}
-          />
+            path="/quiz/answer/:id/:bonus/:points/:ql"
+            component={(props) => <CorrectAnswer {...props} />}
+          /> */}
           <Route
             exact
             path="/score"

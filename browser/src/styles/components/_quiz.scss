@@ -12,3 +12,15 @@
     margin: 10px auto;
   }
 }
+
+.correct {
+  background-color: green !important;
+  color: white;
+  font-weight: bold;
+}
+
+.wrong {
+  background-color: red !important;
+  color: white;
+  font-weight: bold;
+}

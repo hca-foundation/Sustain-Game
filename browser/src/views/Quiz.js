@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Alert } from 'reactstrap';
 import getActiveEvent from '../data/getActiveEvent';
 import Question from '../components/Question';
 import Answers from '../components/Answers';
@@ -9,6 +10,7 @@ export default class Quiz extends Component {
     timer: 0,
     score: 0,
     count: 0,
+    is_correct: '',
   };
 
   componentDidMount() {
@@ -46,34 +48,100 @@ export default class Quiz extends Component {
     });
   };
 
-  runIt = (id, qpoints) => {
-    if (this.state.questions.length > Number(id) + 1) {
-      const bonusPoints = this.state.questions[id].value + (this.state.count * 100);
-      const score = qpoints ? bonusPoints : 0;
+  runIt = (id, qpoints, i) => {
+    if (this.state.questions.length >= Number(id) + 1) {
+      const bonusPoints = this.state.count * 100;
+      const score = qpoints ? bonusPoints + this.state.questions[id].value : 0;
       this.setState({
         score: this.state.score + score,
-        count: this.state.timer,
+        is_correct: qpoints,
+        current_value: this.state.questions[id].value,
+        current_bp: bonusPoints,
       });
 
       if (qpoints) {
-        <CorrectAnswer question={this.state.questions[id]} />;
-        this.props.history.push(`./answer/${Number(id)}`);
+        document.querySelector('.c').classList.add('correct');
+        setTimeout(() => {
+          this.setState({
+            is_correct: '',
+            current_value: '',
+            current_bp: '',
+            count: this.state.timer,
+          });
+
+          if (this.state.questions.length > Number(id) + 1) {
+            document.querySelector('.c').classList.remove('correct');
+            document.querySelector(`#button-${i}`).classList.remove('wrong');
+            this.props.history.push(`./${Number(id) + 1}`);
+          } else {
+            localStorage.setItem('score', JSON.stringify(this.state.score));
+            this.props.history.push('/score');
+          }
+        }, 8000);
+      } else {
+        document.querySelector('.c').classList.add('correct');
+        document.querySelector(`#button-${i}`).classList.add('wrong');
+        setTimeout(() => {
+          this.setState({
+            is_correct: '',
+            current_value: '',
+            current_bp: '',
+            count: this.state.timer,
+          });
+          if (this.state.questions.length > Number(id) + 1) {
+            document.querySelector('.c').classList.remove('correct');
+            document.querySelector(`#button-${i}`).classList.remove('wrong');
+            this.props.history.push(`./${Number(id) + 1}`);
+          } else {
+            localStorage.setItem('score', JSON.stringify(this.state.score));
+            this.props.history.push('/score');
+          }
+        }, 8000);
       }
-      // this.props.history.push(`./answer/${Number(id) + 1}`);
     } else {
       localStorage.setItem('score', JSON.stringify(this.state.score));
       this.props.history.push('/score');
     }
   };
 
+  renderMiddleSection = () => {
+    let view;
+    if (this.state.is_correct === '') {
+      view = <h1 className='crazyTimer'>{this.format(this.state.count)}</h1>;
+    } else if (this.state.is_correct) {
+      view = <Alert className='score-info'>
+      <div className='correct-emoji'>EMOJI</div>
+      <div>CORRECT {this.state.current_value}pts! <br /> BONUS +{this.state.current_bp} for fast answer</div>
+    </Alert>;
+    } else {
+      view = <Alert className='score-info'>
+      <div className='correct-emoji'>EMOJI</div>
+      <div>Wrong Answer <br /> 0pts</div>
+    </Alert>;
+    }
+    return view;
+  }
+
+  renderAnswerButtons = () => {
+    let view;
+    if (this.state.is_correct === '') {
+      view = <Answers disabled={false} a={this.state.questions[this.props.match.params.id].answers} click={this.runIt} id={this.props.match.params.id} />;
+    } else if (this.state.is_correct) {
+      view = <Answers disabled={true} a={this.state.questions[this.props.match.params.id].answers} click={this.runIt} id={this.props.match.params.id} />;
+    } else {
+      view = <Answers disabled={true} a={this.state.questions[this.props.match.params.id].answers} click={this.runIt} id={this.props.match.params.id} />;
+    }
+    return view;
+  }
+
   renderonDOM = () => {
     const some = this.state.count > 0 ? (
         <>
           {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
-          <h1 className='crazyTimer'>{this.format(this.state.count)}</h1>
-          {this.state.questions.length > 0 && <div className='answer-column'>
-          <Answers a={this.state.questions[this.props.match.params.id].answers} click={this.runIt} id={this.props.match.params.id} /></div>}
-        </>) : <CorrectAnswer question={this.state.questions[this.props.match.params.id]} />;
+          <div className='container'>{this.renderMiddleSection()}</div>
+          {this.state.questions.length > 0 && <div className='answer-column'>{this.renderAnswerButtons()}
+          </div>}
+        </>) : '';
     return some;
   };
 
@@ -93,8 +161,4 @@ export default class Quiz extends Component {
       </div>
     );
   }
-}
-
-function CorrectAnswer(props) {
-  console.warn(props.question);
 }
