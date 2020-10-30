@@ -144,7 +144,7 @@ export default class Quiz extends Component {
         <img src={happyface} alt="happy face emoji"/>
       </div>
       <div className="result">
-        <p className="correct-result">CORRECT {this.state.current_value}pts! </p>
+        <p className="correct-result">CORRECT</p>
         <p className="correct-bonus">BONUS +{this.state.current_bp} for fast answer</p>
       </div>
     </Alert>;
