@@ -35,10 +35,25 @@ export default class App extends Component {
             exact
             component={Home}
           />
-           <Route
+          <Route
             path='/countdown'
             exact
             component={Countdown}
+          />
+          <Route
+            path='/score'
+            exact
+            component={Score}
+          />
+           <Route
+            path='/initials'
+            exact
+            component={Initials}
+          />
+          <Route
+            path='/thanks'
+            exact
+            component={Thanks}
           />
           <Route
             path='/score'

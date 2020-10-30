@@ -16,9 +16,9 @@ class Initials extends Component {
           <Form>
             <FormGroup>
               <Label className="m-3" for="initials">Add three letter</Label>
-              <Input type="text" name="initials" id="initials" placeholder="initials" maxLength="3" autocomplete="off" />
+              <Input type="text" name="initials" id="initials" placeholder="initials" maxLength="3" />
               <div className="text-center">
-                <Button className="mt-5" size="lg" onClick={this.handleClick} >View leaderboard </Button>
+                <Button className="mt-5" size="lg" onClick={this.handleClick} > Add my score </Button>
               </div>
             </FormGroup>
           </Form>
