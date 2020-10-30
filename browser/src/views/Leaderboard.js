@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table } from 'reactstrap';
+import { Button, Table } from 'reactstrap';
 import getLeaderBoardInfo from '../data/getLeaderboardInfo';
 
 export default class Leaderboard extends Component {
@@ -9,6 +9,7 @@ export default class Leaderboard extends Component {
 
   componentDidMount() {
     getLeaderBoardInfo().then((resp) => {
+      console.warn(resp);
       this.setState({
         scores: resp,
       });
@@ -17,10 +18,14 @@ export default class Leaderboard extends Component {
 
   render() {
     return (
-      <div>
-        <div>Exit</div>
-        <h1>Leaderboard</h1>
-        {this.state.scores && <ScoresTable scores={this.state.scores} />}
+      <div className='leaderboard-container'>
+        <div className='small-container'>
+          <div className='leaderboard-exit'>
+            <Button className="closeBtn" color="link" onClick={() => this.props.history.push('/thanks')}>Exit</Button>
+          </div>
+          <h1>Leaderboard</h1>
+          {this.state.scores && <ScoresTable scores={this.state.scores} />}
+        </div>
       </div>
     );
   }
@@ -32,7 +37,7 @@ function ScoresTable(props) {
       <tbody>
         {props.scores.map((s, i) => <tr key={i}>
         <th scope="row">{i + 1}</th>
-        <td>{s.intials}</td>
+        <td>{s.initials}</td>
         <td>{s.score}</td>
         </tr>)}
       </tbody>
