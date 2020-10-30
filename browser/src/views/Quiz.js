@@ -9,7 +9,6 @@ export default class Quiz extends Component {
     timer: 0,
     score: 0,
     count: 0,
-    running: true,
   };
 
   componentDidMount() {
@@ -17,6 +16,7 @@ export default class Quiz extends Component {
       this.setState({
         questions: resp[0].questions,
         count: resp[0].timer * 60 / resp[0].questions.length,
+        timer: resp[0].timer * 60 / resp[0].questions.length,
       }, this.handleStart);
     });
   }
@@ -43,7 +43,6 @@ export default class Quiz extends Component {
   handleCountdown = (seconds) => {
     this.setState({
       count: seconds,
-      running: true,
     });
   };
 
@@ -63,14 +62,15 @@ export default class Quiz extends Component {
   render() {
     const runIt = (id, qpoints) => {
       if (this.state.questions.length > Number(id) + 1) {
-        console.warn(qpoints);
         const score = qpoints ? this.state.questions[id].value + (this.state.count * 100) : 0;
         this.setState({
           score: this.state.score + score,
+          count: this.state.timer,
         });
 
         this.props.history.push(`./${Number(id) + 1}`);
       } else {
+        localStorage.setItem('score', JSON.stringify(this.state.score));
         this.props.history.push('/score');
       }
     };
