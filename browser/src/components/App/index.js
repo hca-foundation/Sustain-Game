@@ -4,6 +4,9 @@ import getActiveEventQuestions from '../../data/getActiveEvent';
 import Home from '../../views/Home';
 import Splash from '../../views/Splash';
 import Countdown from '../../views/Countdown';
+import Score from '../views/Score';
+import Thanks from '../views/Thanks';
+import Initials from '../views/Initials';
 
 export default class App extends Component {
   state = {
@@ -33,9 +36,19 @@ export default class App extends Component {
             component={Home}
           />
           <Route
-            path='/countdown'
+            path='/score'
             exact
-            component={Countdown}
+            component={Score}
+          />
+           <Route
+            path='/initials'
+            exact
+            component={Initials}
+          />
+          <Route
+            path='/thanks'
+            exact
+            component={Thanks}
           />
         </Switch>
       </BrowserRouter>
