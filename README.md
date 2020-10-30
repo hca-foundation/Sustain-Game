@@ -18,7 +18,6 @@ There is a backend admin site as well as a user application for game play, which
 ## Tech Stack:
 - **Frontend:**
   - ReactJS
-  - Redux for state management
 - **Backend**
   - Python
   - Django Admin for Admin portal for creating events and quizzes
