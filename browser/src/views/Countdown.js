@@ -42,7 +42,7 @@ export default class Countdown extends Component {
       <div className='countdown'>
         <img src={floatingBoxes} alt="" className="bg-img"/>
 
-        <div class="countdown-container">
+        <div className="countdown-container">
           <h1>Get ready!</h1>
           {this.renderonDOM()}
         </div>
