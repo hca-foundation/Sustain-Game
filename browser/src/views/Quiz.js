@@ -4,6 +4,9 @@ import getActiveEvent from '../data/getActiveEvent';
 import Question from '../components/Question';
 import Answers from '../components/Answers';
 import floatingBoxes from '../images/floatingBoxes.png';
+import UglLogo from '../images/UglLogo.png';
+import sadface from '../images/sadface.png';
+import happyface from '../images/happyface.png';
 
 export default class Quiz extends Component {
   state = {
@@ -131,13 +134,23 @@ export default class Quiz extends Component {
       view = <h1 className='crazyTimer'>{this.format(this.state.count)}</h1>;
     } else if (this.state.is_correct) {
       view = <Alert className='score-info'>
-      <div className='correct-emoji'>EMOJI</div>
-      <div>CORRECT {this.state.current_value}pts! <br /> BONUS +{this.state.current_bp} for fast answer</div>
+      <div className='correct-emoji'>
+        <img src={happyface} alt="happy face emoji"/>
+      </div>
+      <div className="result">
+        <p className="correct-result">CORRECT {this.state.current_value}pts! </p>
+        <p className="correct-bonus">BONUS +{this.state.current_bp} for fast answer</p>
+      </div>
     </Alert>;
     } else {
       view = <Alert className='score-info'>
-      <div className='correct-emoji'>EMOJI</div>
-      <div>Wrong Answer <br /> 0pts</div>
+      <div className='correct-emoji'>
+        <img src={sadface} alt="sad face emoji"/>
+      </div>
+      <div className="result">
+        <p className="wrong-result">Wrong Answer</p>
+        <p className="wrong-points">0pts</p>
+      </div>
     </Alert>;
     }
     return view;
@@ -185,6 +198,9 @@ export default class Quiz extends Component {
           <div className='quiz-body'>{this.renderonDOM()}</div>
           <div className='container'>{(this.state.count === 0 && this.state.questions.length) && this.runIt(this.props.match.params.id, false, 'time')}</div>
         </div>
+
+        <p>brought to you by</p>
+        <img src={UglLogo} alt="urban green lab" className="ugl-logo"/>
       </div>
     );
   }
