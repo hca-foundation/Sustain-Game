@@ -11,14 +11,17 @@ export default class Quiz extends Component {
     score: 0,
     count: 0,
     is_correct: '',
+    running: true,
   };
 
   componentDidMount() {
     getActiveEvent().then((resp) => {
       this.setState({
         questions: resp[0].questions,
-        count: resp[0].timer * 60 / resp[0].questions.length,
-        timer: resp[0].timer * 60 / resp[0].questions.length,
+        // count: resp[0].timer * 60 / resp[0].questions.length,
+        // timer: resp[0].timer * 60 / resp[0].questions.length,
+        count: 0.5 * 60 / resp[0].questions.length,
+        timer: 0.5 * 60 / resp[0].questions.length,
       }, this.handleStart);
     });
   }
@@ -36,10 +39,14 @@ export default class Quiz extends Component {
   };
 
   handleStart = () => {
-    this.timer = setInterval(() => {
-      const newCount = this.state.count - 1;
-      this.setState({ count: newCount >= 0 ? newCount : 0 });
-    }, 1000);
+    if (this.state.running) {
+      this.timer = setInterval(() => {
+        const newCount = this.state.count - 1;
+        this.setState({ count: newCount >= 0 ? newCount : 0 });
+      }, 1000);
+    } else {
+      this.setState({ count: this.state.timer });
+    }
   };
 
   handleCountdown = (seconds) => {
@@ -49,58 +56,104 @@ export default class Quiz extends Component {
   };
 
   runIt = (id, qpoints, i) => {
-    if (this.state.questions.length >= Number(id) + 1) {
-      const bonusPoints = this.state.count * 100;
-      const score = qpoints ? bonusPoints + this.state.questions[id].value : 0;
+    if (i === 'time') {
+      console.warn('IN TIMER');
+      document.querySelector('.c').classList.add('correct');
+
       this.setState({
-        score: this.state.score + score,
-        is_correct: qpoints,
-        current_value: this.state.questions[id].value,
-        current_bp: bonusPoints,
+        is_correct: '',
+        current_value: '',
+        current_bp: '',
+        count: this.state.timer,
       });
 
-      if (qpoints) {
-        document.querySelector('.c').classList.add('correct');
-        setTimeout(() => {
-          this.setState({
-            is_correct: '',
-            current_value: '',
-            current_bp: '',
-            count: this.state.timer,
-          });
-
-          if (this.state.questions.length > Number(id) + 1) {
-            document.querySelector('.c').classList.remove('correct');
-            document.querySelector(`#button-${i}`).classList.remove('wrong');
-            this.props.history.push(`./${Number(id) + 1}`);
-          } else {
-            localStorage.setItem('score', JSON.stringify(this.state.score));
-            this.props.history.push('/score');
-          }
-        }, 8000);
+      if (this.state.questions.length > Number(id) + 1) {
+        document.querySelector('.c').classList.remove('correct');
+        this.props.history.push(`./${Number(id) + 1}`);
       } else {
-        document.querySelector('.c').classList.add('correct');
-        document.querySelector(`#button-${i}`).classList.add('wrong');
-        setTimeout(() => {
-          this.setState({
-            is_correct: '',
-            current_value: '',
-            current_bp: '',
-            count: this.state.timer,
-          });
-          if (this.state.questions.length > Number(id) + 1) {
-            document.querySelector('.c').classList.remove('correct');
-            document.querySelector(`#button-${i}`).classList.remove('wrong');
-            this.props.history.push(`./${Number(id) + 1}`);
-          } else {
-            localStorage.setItem('score', JSON.stringify(this.state.score));
-            this.props.history.push('/score');
-          }
-        }, 8000);
+        localStorage.setItem('score', JSON.stringify(this.state.score));
+        this.props.history.push('/score');
       }
+
+      // setTimeout(() => {
+      //   this.setState({
+      //     is_correct: '',
+      //     current_value: '',
+      //     current_bp: '',
+      //     count: this.state.timer,
+      //     running: true,
+      //   });
+      //   if (this.state.questions.length > Number(id) + 1) {
+      //     document.querySelector('.c').classList.remove('correct');
+      //     this.props.history.push(`./${Number(id) + 1}`);
+      //   } else {
+      //     localStorage.setItem('score', JSON.stringify(this.state.score));
+      //     this.props.history.push('/score');
+      //   }
+      // }, 2000);
     } else {
-      localStorage.setItem('score', JSON.stringify(this.state.score));
-      this.props.history.push('/score');
+      console.warn('Time NOT Up!');
+      if (this.state.questions.length >= Number(id) + 1) {
+        document.querySelector('.c').classList.remove('correct');
+        document.querySelector(`#button-${i}`).classList.remove('wrong');
+        const bonusPoints = this.state.count * 100;
+        const score = qpoints ? bonusPoints + this.state.questions[id].value : 0;
+        this.setState({
+          score: this.state.score + score,
+          is_correct: qpoints,
+          current_value: this.state.questions[id].value,
+          current_bp: bonusPoints,
+          count: this.state.timer,
+          running: false,
+        });
+
+        if (qpoints) {
+          document.querySelector('.c').classList.add('correct');
+          setTimeout(() => {
+            this.setState({
+              is_correct: '',
+              current_value: '',
+              current_bp: '',
+              count: this.state.timer,
+              running: true,
+            });
+
+            if (this.state.questions.length > Number(id) + 1) {
+              document.querySelector('.c').classList.remove('correct');
+              document.querySelector(`#button-${i}`).classList.remove('wrong');
+              this.props.history.push(`./${Number(id) + 1}`);
+            } else {
+              localStorage.setItem('score', JSON.stringify(this.state.score));
+              this.props.history.push('/score');
+            }
+          }, this.state.count * 1000);
+        } else {
+          document.querySelector(`#button-${i}`).classList.remove('wrong');
+          document.querySelector('.c').classList.remove('correct');
+          document.querySelector('.c').classList.add('correct');
+          document.querySelector(`#button-${i}`).classList.add('wrong');
+          setTimeout(() => {
+            this.setState({
+              is_correct: '',
+              current_value: '',
+              current_bp: '',
+              count: this.state.timer,
+              running: true,
+            });
+            if (this.state.questions.length > Number(id) + 1) {
+              document.querySelector('.c').classList.remove('correct');
+              document.querySelector(`#button-${i}`).classList.remove('wrong');
+              this.props.history.push(`./${Number(id) + 1}`);
+            } else {
+              localStorage.setItem('score', JSON.stringify(this.state.score));
+              this.props.history.push('/score');
+            }
+          }, this.state.count * 1000);
+        }
+      } else {
+        localStorage.setItem('score', JSON.stringify(this.state.score));
+        this.props.history.push('/score');
+      }
     }
   };
 
@@ -135,13 +188,12 @@ export default class Quiz extends Component {
   }
 
   renderonDOM = () => {
-    const some = this.state.count > 0 ? (
-        <>
+    const some = <>
           {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
           <div className='container'>{this.renderMiddleSection()}</div>
           {this.state.questions.length > 0 && <div className='answer-column'>{this.renderAnswerButtons()}
           </div>}
-        </>) : '';
+        </>;
     return some;
   };
 
@@ -157,7 +209,8 @@ export default class Quiz extends Component {
         <div>{Number(this.props.match.params.id) + 1} / {this.state.questions.length}</div>
         <div>{this.state.score}pts</div>
         </div>
-        <div className='container'>{this.state.count > 0 && this.renderonDOM()}</div>
+        <div className='container'>{this.renderonDOM()}</div>
+        <div className='container'>{(this.state.count === 0 && this.state.questions.length) && this.runIt(this.props.match.params.id, false, 'time')}</div>
       </div>
     );
   }
