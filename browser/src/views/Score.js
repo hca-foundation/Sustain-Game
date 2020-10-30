@@ -5,6 +5,22 @@ import floatingBoxes from '../images/floatingBoxes.png';
 import UglLogo from '../images/UglLogo.png';
 
 class Score extends Component {
+  getMessage(score) {
+    const numScore = Number(localStorage.getItem('score'));
+    console.log(numScore);
+    let message = '';
+    if (numScore <= 250) {
+      message = 'Beginner: We\'re all at different points in our sustainability journey. Head over to Urban Green Lab\'s website to learn more and boost that score up!';
+    } else if (numScore <= 600) {
+      message = 'Novice: Not bad but there is some room for improvement. Hang in there and keep learning!';
+    } else if (numScore <= 850) {
+      message = 'Skilled: Seems like you\'re well on your wat to becoming an expert, keep it';
+    } else {
+      message = 'Expert: Wow! Check you out, we\'ve got a sustainability expert over here!';
+    }
+    return message;
+  }
+
   render() {
     const score = localStorage.getItem('score');
     return (
@@ -17,7 +33,7 @@ class Score extends Component {
             <h1 className="mt-2 score">{score}<span>pts</span> </h1>
             <p className="mt-2 scoreText">YOUR SCORE</p>
             <p className="m-3">
-              At vero eos et accusamus et iusto odio praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+              {this.getMessage(score)}
             </p>
             <Button className="btn-dark btn" onClick={() => this.props.history.push('/initials')} >View leaderboard</Button>
           </div>

@@ -176,7 +176,7 @@ export default class Quiz extends Component {
     const some = <>
           {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
           {this.state.questions.length > 0 ? <div className='container'>{this.renderMiddleSection()}</div> : 'Loading' }
-          {this.state.questions.length > 0 && <div className='answer-column'>{this.renderAnswerButtons()}
+          {this.state.questions.length > 0 && <div className={`answer-column ${this.state.is_correct !== '' ? 'not-active' : ''}`}>{this.renderAnswerButtons()}
           </div>}
         </>;
     return some;
