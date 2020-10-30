@@ -3,6 +3,7 @@ import { Alert } from 'reactstrap';
 import getActiveEvent from '../data/getActiveEvent';
 import Question from '../components/Question';
 import Answers from '../components/Answers';
+import floatingBoxes from '../images/floatingBoxes.png';
 
 export default class Quiz extends Component {
   state = {
@@ -171,13 +172,19 @@ export default class Quiz extends Component {
 
   render() {
     return (
-      <div>
-        <div className="quiz-header">
-        <div>{Number(this.props.match.params.id) + 1} / {this.state.questions.length}</div>
-        <div>{this.state.score}pts</div>
+      <div className="quiz-container">
+        <img src={floatingBoxes} alt="" className="bg-img"/>
+
+        <div className="quiz">
+          <div className="quiz-header">
+            <div className="question-count">
+              {Number(this.props.match.params.id) + 1} / {this.state.questions.length}
+            </div>
+            <div className="score">{this.state.score}pts</div>
+          </div>
+          <div className='quiz-body'>{this.renderonDOM()}</div>
+          <div className='container'>{(this.state.count === 0 && this.state.questions.length) && this.runIt(this.props.match.params.id, false, 'time')}</div>
         </div>
-        <div className='container'>{this.renderonDOM()}</div>
-        <div className='container'>{(this.state.count === 0 && this.state.questions.length) && this.runIt(this.props.match.params.id, false, 'time')}</div>
       </div>
     );
   }
