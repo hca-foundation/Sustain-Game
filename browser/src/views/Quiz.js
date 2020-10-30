@@ -7,21 +7,16 @@ import Answers from '../components/Answers';
 export default class Quiz extends Component {
   state = {
     questions: [],
-    timer: 0,
+    timer: 10,
     score: 0,
-    count: 0,
+    count: 10,
     is_correct: '',
-    running: true,
   };
 
   componentDidMount() {
     getActiveEvent().then((resp) => {
       this.setState({
         questions: resp[0].questions,
-        // count: resp[0].timer * 60 / resp[0].questions.length,
-        // timer: resp[0].timer * 60 / resp[0].questions.length,
-        count: 0.5 * 60 / resp[0].questions.length,
-        timer: 0.5 * 60 / resp[0].questions.length,
       }, this.handleStart);
     });
   }
@@ -31,22 +26,15 @@ export default class Quiz extends Component {
   }
 
   format = (time) => {
-    let seconds = time % 60;
-    let minutes = Math.floor(time / 60);
-    minutes = minutes.toString().length === 1 ? `0${minutes}` : minutes;
-    seconds = seconds.toString().length === 1 ? `0${seconds}` : seconds;
-    return `${minutes}:${seconds}`;
+    const seconds = time % 60;
+    return `${seconds}`;
   };
 
   handleStart = () => {
-    if (this.state.running) {
-      this.timer = setInterval(() => {
-        const newCount = this.state.count - 1;
-        this.setState({ count: newCount >= 0 ? newCount : 0 });
-      }, 1000);
-    } else {
-      this.setState({ count: this.state.timer });
-    }
+    this.timer = setInterval(() => {
+      const newCount = this.state.count - 1;
+      this.setState({ count: newCount >= 0 ? newCount : 0 });
+    }, 1000);
   };
 
   handleCountdown = (seconds) => {
@@ -57,7 +45,6 @@ export default class Quiz extends Component {
 
   runIt = (id, qpoints, i) => {
     if (i === 'time') {
-      console.warn('IN TIMER');
       document.querySelector('.c').classList.add('correct');
 
       this.setState({
@@ -74,23 +61,6 @@ export default class Quiz extends Component {
         localStorage.setItem('score', JSON.stringify(this.state.score));
         this.props.history.push('/score');
       }
-
-      // setTimeout(() => {
-      //   this.setState({
-      //     is_correct: '',
-      //     current_value: '',
-      //     current_bp: '',
-      //     count: this.state.timer,
-      //     running: true,
-      //   });
-      //   if (this.state.questions.length > Number(id) + 1) {
-      //     document.querySelector('.c').classList.remove('correct');
-      //     this.props.history.push(`./${Number(id) + 1}`);
-      //   } else {
-      //     localStorage.setItem('score', JSON.stringify(this.state.score));
-      //     this.props.history.push('/score');
-      //   }
-      // }, 2000);
     } else {
       console.warn('Time NOT Up!');
       if (this.state.questions.length >= Number(id) + 1) {
@@ -104,7 +74,6 @@ export default class Quiz extends Component {
           current_value: this.state.questions[id].value,
           current_bp: bonusPoints,
           count: this.state.timer,
-          running: false,
         });
 
         if (qpoints) {
@@ -115,7 +84,6 @@ export default class Quiz extends Component {
               current_value: '',
               current_bp: '',
               count: this.state.timer,
-              running: true,
             });
 
             if (this.state.questions.length > Number(id) + 1) {
@@ -126,7 +94,7 @@ export default class Quiz extends Component {
               localStorage.setItem('score', JSON.stringify(this.state.score));
               this.props.history.push('/score');
             }
-          }, this.state.count * 1000);
+          }, 5000);
         } else {
           document.querySelector(`#button-${i}`).classList.remove('wrong');
           document.querySelector('.c').classList.remove('correct');
@@ -138,7 +106,6 @@ export default class Quiz extends Component {
               current_value: '',
               current_bp: '',
               count: this.state.timer,
-              running: true,
             });
             if (this.state.questions.length > Number(id) + 1) {
               document.querySelector('.c').classList.remove('correct');
@@ -148,7 +115,7 @@ export default class Quiz extends Component {
               localStorage.setItem('score', JSON.stringify(this.state.score));
               this.props.history.push('/score');
             }
-          }, this.state.count * 1000);
+          }, 5000);
         }
       } else {
         localStorage.setItem('score', JSON.stringify(this.state.score));
