@@ -32,7 +32,7 @@ export default class Countdown extends Component {
   };
 
   renderonDOM = () => {
-    const some = this.state.count > 0 ? <><h1 className='crazyTimer count'>{this.format(this.state.count)}</h1><button disabled className='btn btn-blue'>Let's Play</button></> : <><h1 className="count">0</h1><Link to='./questions/1' className="btn btn-blue">Let's Play</Link></>;
+    const some = this.state.count > 0 ? <><h1 className='crazyTimer count'>{this.format(this.state.count)}</h1><button disabled className='btn btn-blue'>Let's Play</button></> : <><h1 className="count">0</h1><Link to='./quiz/0' className="btn btn-blue">Let's Play</Link></>;
     return some;
   };
 
