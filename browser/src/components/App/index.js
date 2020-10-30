@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../../views/Home';
 import Splash from '../../views/Splash';
 import Countdown from '../../views/Countdown';
-import Score from '../views/Score';
-import Thanks from '../views/Thanks';
-import Initials from '../views/Initials';
+import Score from '../../views/Score';
+import Thanks from '../../views/Thanks';
+import Initials from '../../views/Initials';
 import Quiz from '../../views/Quiz';
 
 export default class App extends Component {

@@ -4,6 +4,11 @@ import {
 } from 'reactstrap';
 
 class Initials extends Component {
+  handleClick = () => {
+    // add route to push to API
+    this.props.history.push('/leaderboard');
+  }
+
   render() {
     const score = localStorage.getItem('score');
     return (
