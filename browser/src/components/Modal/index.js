@@ -33,7 +33,7 @@ const GameModal = (props) => {
 
           <img src={number2} alt="2" className="modal-number"/>
 
-          <p style={{ textAlign: 'center' }}>Once all questions have been answered, players will be asked to add their initials to the leaderboard and winner information will be displayed on the leaderboard and will show players personal results and rank.</p>
+          <p style={{ textAlign: 'center' }}>Once all questions have been answered, players will be asked to add their initials to the leaderboard. Winner information will be displayed on the leaderboard and will show players personal results and rank.</p>
         </ModalBody>
       </Modal>
     </div>
