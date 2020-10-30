@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const getActiveEventQuestions = () => new Promise((resolve, reject) => {
-  axios.get('./fixtures/activeEventQuizzesData.json')
-    .then((response) => resolve(response.data[0].questions))
+const getActiveEvent = () => new Promise((resolve, reject) => {
+  axios.get('/fixtures/activeEventQuizzesData.json')
+    .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
-export default getActiveEventQuestions;
+export default getActiveEvent;
