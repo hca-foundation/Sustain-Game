@@ -10,7 +10,7 @@ export default class Home extends Component {
     fname: '',
     lname: '',
     email: '',
-    zip: '',
+    zip_code: '',
   }
 
   handleChange = (e) => {
@@ -46,8 +46,8 @@ export default class Home extends Component {
               <Input onChange={this.handleChange} type="email" name="email" id="email" required/>
             </FormGroup>
             <FormGroup>
-              <Label for="lname">Zip Code <span className="form-required">*</span></Label>
-              <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip" id="zip" maxLength="5" required/>
+              <Label for="zip_code">Zip Code <span className="form-required">*</span></Label>
+              <Input onChange={this.handleChange} type="text" pattern="[0-9]*" name="zip_code" id="zip_code" maxLength="5" required/>
             </FormGroup>
             <Button className='btn btn-dark'>Get Ready</Button>
           </Form>

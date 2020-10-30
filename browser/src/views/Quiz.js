@@ -19,8 +19,12 @@ export default class Quiz extends Component {
 
   componentDidMount() {
     getActiveEvent().then((resp) => {
+      localStorage.setItem('event_id', resp.event_id);
+      localStorage.setItem('quiz_bank', resp.quiz_id);
       this.setState({
-        questions: resp[0].questions,
+        questions: resp.questions,
+        quiz_bank: resp.quiz_id,
+        event_id: resp.event_id,
       }, this.handleStart);
     });
   }
@@ -171,7 +175,7 @@ export default class Quiz extends Component {
   renderonDOM = () => {
     const some = <>
           {this.state.questions.length > 0 ? this.renderQuestion() : 'Loading'}
-          <div className='container'>{this.renderMiddleSection()}</div>
+          {this.state.questions.length > 0 ? <div className='container'>{this.renderMiddleSection()}</div> : 'Loading' }
           {this.state.questions.length > 0 && <div className='answer-column'>{this.renderAnswerButtons()}
           </div>}
         </>;
