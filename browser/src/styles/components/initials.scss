@@ -1,0 +1,25 @@
+.initialsContainer {
+    background-color: $background;
+    color: $font-main;
+    margin-top: 3rem;
+    margin: 1rem;
+
+    .score {
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .scoreText {
+      font-weight: bold;
+      text-align: center;
+    }
+    .closeBtn {
+      color: $font-main;
+      margin-left: 80%;
+    }
+    hr {
+        color: $font-main;
+        background-color: $font-main;
+        height: 1px;
+    }
+  }
