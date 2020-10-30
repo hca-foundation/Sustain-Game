@@ -27,7 +27,7 @@ export default class Leaderboard extends Component {
         </div>
           <img src={sustaingame} alt="sustain game" className="sustaingame-img"/>
           <h1>Leaderboard</h1>
-          <div className='score-table'>{this.state.scores && <ScoresTable scores={this.state.scores} />}</div>
+          <div className='score-table'>{this.state.scores.length > 0 ? <ScoresTable scores={this.state.scores} /> : <h4 style={{ textAlign: 'center' }}>Be the first to score!</h4>} <Button onClick={() => this.props.history.push('/')}>PLAY NOW</Button></div>
         </div>
         <p>brought to you by</p>
         <img src={UglLogo} alt="urban green lab" className="ugl-logo"/>

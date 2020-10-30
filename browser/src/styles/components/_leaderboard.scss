@@ -33,10 +33,11 @@
   }
 
   .score-table {
-    margin: auto;
+    margin: 0 auto;
     width: 90%;
     height: 300px;
     overflow-y: scroll;
+    text-align: center;
 
     .align-right {
       text-align: right;
