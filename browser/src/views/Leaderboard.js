@@ -11,7 +11,6 @@ export default class Leaderboard extends Component {
 
   componentDidMount() {
     getLeaderBoardInfo().then((resp) => {
-      console.warn(resp);
       this.setState({
         scores: resp,
       });

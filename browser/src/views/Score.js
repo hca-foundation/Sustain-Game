@@ -5,9 +5,8 @@ import floatingBoxes from '../images/floatingBoxes.png';
 import UglLogo from '../images/UglLogo.png';
 
 class Score extends Component {
-  getMessage(score) {
+  getMessage() {
     const numScore = Number(localStorage.getItem('score'));
-    console.log(numScore);
     let message = '';
     if (numScore <= 250) {
       message = 'Beginner: We\'re all at different points in our sustainability journey. Head over to Urban Green Lab\'s website to learn more and boost that score up!';
@@ -33,7 +32,7 @@ class Score extends Component {
             <h1 className="mt-2 score">{score}<span>pts</span> </h1>
             <p className="mt-2 scoreText">YOUR SCORE</p>
             <p className="m-3">
-              {this.getMessage(score)}
+              {this.getMessage()}
             </p>
             <Button className="btn-dark btn" onClick={() => this.props.history.push('/initials')} >View leaderboard</Button>
           </div>
