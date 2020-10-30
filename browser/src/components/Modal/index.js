@@ -25,13 +25,13 @@ const GameModal = (props) => {
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle} close={closeBtn}></ModalHeader>
         <ModalBody>
-          <img src={sustaingame} alt="sustain game" class="sustaingame-img"/>
+          <img src={sustaingame} alt="sustain game" className="sustaingame-img"/>
           <h1>How to Play</h1>
-          <img src={number1} alt="1" class="modal-number"/>
+          <img src={number1} alt="1" className="modal-number"/>
 
           <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
 
-          <img src={number2} alt="1" class="modal-number"/>
+          <img src={number2} alt="1" className="modal-number"/>
 
           <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis</p>
         </ModalBody>

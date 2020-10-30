@@ -39,7 +39,7 @@ export default class Countdown extends Component {
   render() {
     return (
       <div className='countdown'>
-        <div class="countdown-container">
+        <div className="countdown-container">
           <h1>Get ready!</h1>
           {this.renderonDOM()}
         </div>
