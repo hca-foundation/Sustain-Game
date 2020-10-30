@@ -11,8 +11,19 @@
   justify-content: center;
   padding: 30px;
 
-  .closeBtn{
+  @media only screen and (min-width: 600px) {
+    height: 100vh;
+  }
+
+  .btn-container {
+    text-align: right;
+  }
+  .closeBtn {
     color: $font-main;
+    background-color: transparent;
+    width: 50px;
+    padding: 0%;
+    border: none;
   }
 
   .sustaingame-img {
@@ -20,7 +31,7 @@
     margin: 0 auto 40px;
     max-width: 120px;
   }
-  
+
   .score-table {
     margin: auto;
     width: 90%;
@@ -31,19 +42,18 @@
       text-align: right;
     }
   }
-  
+
   .leaderboard-exit {
     display: flex;
     justify-content: center;
     padding: 10px;
   }
-  
 
-  .small-container{
+  .small-container {
     background-color: $white;
     border-radius: 20px;
     margin-bottom: 40px;
-    padding: 50px 30px 60px;
+    padding: 20px 30px 60px;
     width: 100%;
     max-width: 450px;
     box-shadow: 0px 2px 4px 0px rgba(31, 37, 50, 0.2);

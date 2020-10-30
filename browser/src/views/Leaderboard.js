@@ -22,12 +22,12 @@ export default class Leaderboard extends Component {
     return (
       <div className='leaderboard-container'>
         <div className='small-container'>
+        <div className="btn-container">
+          <Button className="closeBtn" onClick={() => this.props.history.push('/thanks')}>Exit</Button>
+        </div>
           <img src={sustaingame} alt="sustain game" className="sustaingame-img"/>
           <h1>Leaderboard</h1>
           <div className='score-table'>{this.state.scores && <ScoresTable scores={this.state.scores} />}</div>
-          <div className='leaderboard-exit'>
-            <Button className="closeBtn" color="link" onClick={() => this.props.history.push('/thanks')}>Exit</Button>
-          </div>
         </div>
         <p>brought to you by</p>
         <img src={UglLogo} alt="urban green lab" className="ugl-logo"/>
