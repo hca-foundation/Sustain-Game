@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UglLogo from '../images/UglLogo.png';
 
 export default class Countdown extends Component {
   state = {
@@ -31,23 +32,20 @@ export default class Countdown extends Component {
   };
 
   renderonDOM = () => {
-    const some = this.state.count > 0 ? (
-        <>
-          <h1 className='crazyTimer'>{this.format(this.state.count)}</h1>
-          <button disabled className='btn btn-dark'>
-            Let's Play
-          </button>
-        </>) : (
-        <>
-          <h1>0</h1>
-          <Link to='./quiz/0' className='btn btn-dark'>
-            Let's Play
-          </Link>
-        </>);
+    const some = this.state.count > 0 ? <><h1 className='crazyTimer count'>{this.format(this.state.count)}</h1><button disabled className='btn btn-blue'>Let's Play</button></> : <><h1 className="count">0</h1><Link to='./quiz/0' className="btn btn-blue">Let's Play</Link></>;
     return some;
   };
 
   render() {
-    return <div className='container'>{this.renderonDOM()}</div>;
+    return (
+      <div className='countdown'>
+        <div class="countdown-container">
+          <h1>Get ready!</h1>
+          {this.renderonDOM()}
+        </div>
+        <p>brought to you by</p>
+        <img src={UglLogo} alt="urban green lab" className="ugl-logo"/>
+      </div>
+    );
   }
 }

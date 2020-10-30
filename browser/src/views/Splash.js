@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from '../components/Modal';
+import question from '../images/question.png';
+import sustaingame from '../images/sustaingame.png';
+import UglLogo from '../images/UglLogo.png';
 
 export default class Splash extends Component {
   render() {
     return (
-      <div>
-        <h1>Splash Screen</h1>
-        <p>Design and customization will happen in the UI design phase</p>
-        <Link to='/info' className='btn btn-success'>Play the Game</Link>
+      <div className="splash">
+        <img src={question} alt="question mark" className="question"/>
+        <img src={sustaingame} alt="sustain game" className="sustaingame-img"/>
+        <p>brought to you by</p>
+        <img src={UglLogo} alt="urban green lab" className="ugl-logo"/>
+        <Link to='/info' className='btn btn-dark'>Play the Game</Link>
         <Modal buttonLabel={'How to Play'}/>
       </div>
     );
