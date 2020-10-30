@@ -20,7 +20,7 @@ const GameModal = (props) => {
   const closeBtn = <button className="close" onClick={toggle}>&times;</button>;
 
   return (
-    <div>
+    <div className="modal-container">
       <Button className="btn-transparent" color="info" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle} close={closeBtn}></ModalHeader>

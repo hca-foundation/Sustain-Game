@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
+
   h1 {
     font-size: 28px;
     letter-spacing: 1.4px;
@@ -25,6 +26,7 @@
     padding: 60px 30px 40px;
     width: 100%;
     max-width: 450px;
+    z-index: 1;
 
     label {
       font-family: "Roboto", sans-serif;

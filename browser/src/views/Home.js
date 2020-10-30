@@ -3,6 +3,7 @@ import {
   Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
 import UglLogo from '../images/UglLogo.png';
+import floatingBoxes from '../images/floatingBoxes.png';
 
 export default class Home extends Component {
   state = {
@@ -27,6 +28,8 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
+        <img src={floatingBoxes} alt="" className="bg-img"/>
+
         <div className="home-form">
           <h1>Before we begin</h1>
           <Form onSubmit={this.handleSubmit} >
