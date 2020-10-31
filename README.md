@@ -140,7 +140,7 @@ We are deploying the FE and BE separately to decouple the deployments and update
 - <a href="https://github.com/meg723" target="_blank">**Meg Underwood (Project Manager)**</a>
 - <a href="https://github.com/drteresavasquez" target="_blank">**Dr. Teresa Vasquez (Tech Lead)**</a>
 
-### Designers
+### Designers/UXI and Video
 - <a href="https://github.com/ryan-firm" target="_blank">**Ryan Firm**</a>
 - <a href="#" target="_blank">**Nick	Miller**</a>
 
